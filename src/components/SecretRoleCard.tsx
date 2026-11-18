@@ -19,14 +19,11 @@ export function SecretRoleCard({
   secondsLeft,
 }: SecretRoleCardProps) {
   const isMrWhite = player.role === "Mr. White";
-  const isUndercover = player.role === "Undercover";
-  const isCivilian = player.role === "Civilian";
 
-  const characterImage = isCivilian
-    ? "/characters/civilian.png"
-    : isUndercover
-      ? "/characters/undercover.png"
-      : "/characters/mr_white.png";
+  // Civilian dan Undercover sengaja memakai tampilan identik agar role tidak ketahuan saat buka kartu
+  const characterImage = isMrWhite
+    ? "/characters/mr_white.png"
+    : "/characters/civilian.png";
 
   return (
     <div
@@ -133,15 +130,13 @@ export function SecretRoleCard({
           } ${
             isMrWhite
               ? "bg-gradient-to-b from-[#24133d] to-[#11071f] border-purple-400/60 shadow-purple-950/50"
-              : isUndercover
-                ? "bg-gradient-to-b from-[#3b0d23] to-[#17040e] border-rose-500/60 shadow-rose-950/50"
-                : "bg-gradient-to-b from-[#0e2747] to-[#061224] border-sky-400/60 shadow-sky-950/50"
+              : "bg-gradient-to-b from-[#0e2747] to-[#061224] border-sky-400/60 shadow-sky-950/50"
           }`}
         >
           {/* Inner decorative border */}
           <div className="absolute inset-2 rounded-2xl border border-white/10 pointer-events-none" />
 
-          {/* Top Header: Player Name + Role Badge */}
+          {/* Top Header: Player Name + Neutral Badge (No Civilian/Undercover Role Leak!) */}
           <div className="w-full flex justify-between items-center z-10">
             <span className="font-cinzel text-xs font-bold text-slate-300 uppercase tracking-wider">
               {player.name}
@@ -150,13 +145,11 @@ export function SecretRoleCard({
               className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm flex items-center gap-1 ${
                 isMrWhite
                   ? "bg-purple-900/70 text-purple-200 border border-purple-400/50"
-                  : isUndercover
-                    ? "bg-rose-900/70 text-rose-200 border border-rose-400/50"
-                    : "bg-sky-900/70 text-sky-200 border border-sky-400/50"
+                  : "bg-sky-900/70 text-sky-200 border border-sky-400/50"
               }`}
             >
               {isMrWhite ? <HelpCircle className="w-3 h-3" /> : <Sparkles className="w-3 h-3" />}
-              <span>{player.role}</span>
+              <span>{isMrWhite ? "Mr. White" : "Kata Rahasia"}</span>
             </div>
           </div>
 
@@ -166,7 +159,7 @@ export function SecretRoleCard({
             <div className="relative w-20 h-28 sm:w-24 sm:h-32 mb-1 drop-shadow-[0_12px_24px_rgba(0,0,0,0.7)] animate-float-ghost">
               <Image
                 src={characterImage}
-                alt={player.role}
+                alt={isMrWhite ? "Mr. White" : "Kartu Rahasia"}
                 fill
                 sizes="(max-width: 640px) 80px, 96px"
                 className="object-contain"
@@ -183,33 +176,19 @@ export function SecretRoleCard({
                   TIDAK ADA KATA!
                 </h4>
                 <p className="text-[11px] text-slate-300 leading-snug">
-                  Anda adalah <strong>Mr. White</strong>. Dengarkan petunjuk orang lain dan tebak kata Civilian di akhir!
+                  Anda adalah <strong>Mr. White</strong>. Dengarkan petunjuk orang lain dan tebak kata Civilian jika tertangkap!
                 </p>
               </div>
             ) : (
-              <div
-                className={`p-3.5 rounded-2xl w-full border shadow-inner ${
-                  isUndercover
-                    ? "bg-black/50 border-rose-500/40"
-                    : "bg-black/50 border-sky-500/40"
-                }`}
-              >
+              <div className="p-3.5 rounded-2xl w-full border shadow-inner bg-black/50 border-sky-500/40">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-0.5">
                   KATA RAHASIA ANDA
                 </span>
-                <h2
-                  className={`font-cinzel text-2xl sm:text-3xl font-black tracking-wide my-0.5 ${
-                    isUndercover
-                      ? "text-rose-300 drop-shadow-[0_0_12px_rgba(244,63,94,0.4)]"
-                      : "text-amber-200 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)]"
-                  }`}
-                >
+                <h2 className="font-cinzel text-2xl sm:text-3xl font-black tracking-wide my-0.5 text-amber-200 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)]">
                   {player.clue}
                 </h2>
                 <p className="text-[10px] text-slate-300 mt-1">
-                  {isUndercover
-                    ? "Kata Anda serupa dengan Civilian. Jangan sampai dicurigai!"
-                    : "Berikan petunjuk cerdik tanpa membocorkan ke Mr. White!"}
+                  Berikan petunjuk cerdik yang menggambarkan kata ini tanpa terlalu gamblang!
                 </p>
               </div>
             )}

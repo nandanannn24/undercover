@@ -8,6 +8,7 @@ export type GameStage =
   | "REVEAL"
   | "DISCUSSION"
   | "VOTING"
+  | "ELIMINATION_REVEAL"
   | "MR_WHITE_GUESS"
   | "GAME_OVER";
 

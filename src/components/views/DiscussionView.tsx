@@ -161,25 +161,41 @@ export function DiscussionView() {
                     key={idx}
                     className={`p-3 rounded-2xl border flex items-center gap-3 transition-all ${
                       p.isEliminated
-                        ? "opacity-30 bg-black/20 border-white/5 line-through grayscale"
+                        ? "opacity-65 bg-black/30 border-white/10"
                         : isCurrent
                         ? "bg-amber-500/15 border-amber-400 shadow-[0_0_20px_rgba(212,175,55,0.3)] ring-1 ring-amber-400"
                         : "glass-card-subtle border-purple-500/20 hover:border-purple-500/40"
                     }`}
                   >
-                    <CartoonAvatar id={p.avatar} size="xs" />
+                    <div className={p.isEliminated ? "grayscale opacity-60" : ""}>
+                      <CartoonAvatar id={p.avatar} size="xs" />
+                    </div>
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold text-slate-100 truncate">
+                      <div className="flex items-center justify-between gap-1">
+                        <span className={`text-xs font-bold truncate ${p.isEliminated ? "text-slate-400 line-through" : "text-slate-100"}`}>
                           {p.name}
                         </span>
                         <span className="text-[10px] font-mono text-slate-400">
                           #{idx + 1}
                         </span>
                       </div>
-                      <span className={`text-[10px] font-semibold ${isCurrent ? "text-amber-300" : "text-slate-400"}`}>
-                        {p.isEliminated ? "Tereliminasi" : isCurrent ? "Sedang Bicara" : "Menyimak"}
-                      </span>
+                      {p.isEliminated ? (
+                        <span
+                          className={`inline-block mt-0.5 text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+                            p.role === "Undercover"
+                              ? "bg-rose-950/70 text-rose-300 border-rose-500/40"
+                              : p.role === "Mr. White"
+                                ? "bg-purple-950/70 text-purple-300 border-purple-400/40"
+                                : "bg-sky-950/70 text-sky-300 border-sky-400/40"
+                          }`}
+                        >
+                          Gugur • {p.role}
+                        </span>
+                      ) : (
+                        <span className={`text-[10px] font-semibold ${isCurrent ? "text-amber-300" : "text-slate-400"}`}>
+                          {isCurrent ? "Sedang Bicara" : "Menyimak"}
+                        </span>
+                      )}
                     </div>
                   </div>
                 );

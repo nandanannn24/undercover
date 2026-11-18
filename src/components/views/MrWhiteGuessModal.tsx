@@ -41,14 +41,14 @@ export function MrWhiteGuessModal() {
           />
         </div>
 
-        <span className="font-mono text-[10px] font-bold tracking-widest text-purple-300 uppercase block mb-1 bg-purple-950/70 px-3 py-0.5 rounded-full inline-block border border-purple-400/40">
-          KESEMPATAN TERAKHIR
+        <span className="font-mono text-[10px] font-bold tracking-widest text-purple-300 uppercase mb-2 bg-purple-950/70 px-3 py-0.5 rounded-full inline-block border border-purple-400/40">
+          ROLE TERBONGKAR • MR. WHITE
         </span>
         <h3 className="font-cinzel text-xl font-black text-amber-100 tracking-wide mb-1">
-          Mr. White Tertangkap!
+          {votedPlayer.name} adalah Mr. White!
         </h3>
         <p className="text-xs text-slate-300 mb-4 leading-relaxed font-medium">
-          Pemain <strong>{votedPlayer.name}</strong> adalah <strong>Mr. White</strong>! Dia memiliki satu kesempatan terakhir: jika berhasil menebak kata Civilian, <strong>Mr. White langsung memenangkan game!</strong>
+          Kesempatan terakhir! Tulis kata rahasia Civilian dengan tepat — jika benar, <strong>Mr. White langsung menang!</strong>
         </p>
 
         {errorMsg && (

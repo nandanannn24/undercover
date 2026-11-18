@@ -247,5 +247,6 @@ export function evaluateWinConditions(players: Player[]): WinConditionResult {
 
 export function checkMrWhiteGuess(guess: string, civilianWord: string): boolean {
   if (!guess || !civilianWord) return false;
-  return guess.trim().toLowerCase() === civilianWord.trim().toLowerCase();
+  const normalize = (s: string) => s.trim().toLowerCase().replace(/\s+/g, " ");
+  return normalize(guess) === normalize(civilianWord);
 }

@@ -10,6 +10,7 @@ import { ConfirmationView } from "@/components/views/ConfirmationView";
 import { RevealView } from "@/components/views/RevealView";
 import { DiscussionView } from "@/components/views/DiscussionView";
 import { VotingView } from "@/components/views/VotingView";
+import { EliminationRevealModal } from "@/components/views/EliminationRevealModal";
 import { MrWhiteGuessModal } from "@/components/views/MrWhiteGuessModal";
 import { GameOverView } from "@/components/views/GameOverView";
 
@@ -33,6 +34,7 @@ export default function HomePage() {
         {stage === "REVEAL" && <RevealView />}
         {stage === "DISCUSSION" && <DiscussionView />}
         {stage === "VOTING" && <VotingView />}
+        {stage === "ELIMINATION_REVEAL" && <EliminationRevealModal />}
         {stage === "MR_WHITE_GUESS" && <MrWhiteGuessModal />}
         {stage === "GAME_OVER" && <GameOverView />}
       </div>

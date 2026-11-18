@@ -34,6 +34,8 @@ interface GameStore {
   currentRound: number;
   currentSpeakerIndex: number;
   votedPlayer: Player | null;
+  lastEliminatedNote: string;
+  pendingNextStage: "DISCUSSION" | "GAME_OVER" | null;
   eliminatedHistory: { name: string; role: Role; round: number }[];
   winner: Role | null;
   winReason: string;
@@ -48,6 +50,7 @@ interface GameStore {
   nextRevealStep: () => void;
   nextSpeaker: () => void;
   castVote: (targetId: string) => void;
+  continueAfterElimination: () => void;
   handleMrWhiteGuess: (guess: string) => boolean;
   playAgainSamePlayers: () => void;
   playAgainNewPlayers: () => void;
@@ -104,6 +107,8 @@ export const useGameStore = create<GameStore>()(
       currentRound: 1,
       currentSpeakerIndex: 0,
       votedPlayer: null,
+      lastEliminatedNote: "",
+      pendingNextStage: null,
       eliminatedHistory: [],
       winner: null,
       winReason: "",
@@ -152,6 +157,8 @@ export const useGameStore = create<GameStore>()(
           currentRound: 1,
           currentSpeakerIndex: 0,
           votedPlayer: null,
+          lastEliminatedNote: "",
+          pendingNextStage: null,
           eliminatedHistory: [],
           winner: null,
           winReason: "",
@@ -209,24 +216,27 @@ export const useGameStore = create<GameStore>()(
 
         sound.playVoteSelect();
 
+        // Jika yang terpilih adalah Mr. White -> langsung tampilkan modal pengumuman Mr. White + input tebakan clue!
         if (target.role === "Mr. White") {
           set({
             votedPlayer: target,
+            lastEliminatedNote: "",
+            pendingNextStage: null,
             stage: "MR_WHITE_GUESS",
           });
           return;
         }
 
+        // Civilian atau Undercover -> eliminasi, lalu tampilkan layar ELIMINATION_REVEAL untuk membongkar role aslinya!
         sound.playEliminationGong();
         const updatedPlayers = players.map((p) =>
           p.id === targetId ? { ...p, isEliminated: true, eliminatedRound: currentRound } : p
         );
 
         const newHistory = [...get().eliminatedHistory, { name: target.name, role: target.role, round: currentRound }];
-
         const winCheck = evaluateWinConditions(updatedPlayers);
+
         if (winCheck.isGameOver && winCheck.winner) {
-          sound.playVictory();
           const entry: GameHistoryEntry = {
             id: `hist_${Date.now()}`,
             date: new Date().toLocaleDateString("id-ID"),
@@ -246,18 +256,42 @@ export const useGameStore = create<GameStore>()(
 
           set({
             players: updatedPlayers,
+            votedPlayer: target,
+            lastEliminatedNote: "",
+            pendingNextStage: "GAME_OVER",
             eliminatedHistory: newHistory,
             winner: winCheck.winner,
             winReason: winCheck.reason || "",
             gameHistory: [entry, ...get().gameHistory.slice(0, 19)],
-            stage: "GAME_OVER",
+            stage: "ELIMINATION_REVEAL",
           });
         } else {
           set({
             players: updatedPlayers,
+            votedPlayer: target,
+            lastEliminatedNote: "",
+            pendingNextStage: "DISCUSSION",
             eliminatedHistory: newHistory,
+            stage: "ELIMINATION_REVEAL",
+          });
+        }
+      },
+
+      continueAfterElimination: () => {
+        const { pendingNextStage, players, currentRound } = get();
+        sound.playClick();
+
+        if (pendingNextStage === "GAME_OVER") {
+          sound.playVictory();
+          set({
+            pendingNextStage: null,
+            stage: "GAME_OVER",
+          });
+        } else {
+          set({
+            pendingNextStage: null,
             currentRound: currentRound + 1,
-            currentSpeakerIndex: pickRandomFirstSpeakerIndex(updatedPlayers),
+            currentSpeakerIndex: pickRandomFirstSpeakerIndex(players),
             stage: "DISCUSSION",
           });
         }
@@ -290,8 +324,9 @@ export const useGameStore = create<GameStore>()(
 
           set({
             winner: "Mr. White",
-            winReason: `Mr. White (${votedPlayer.name}) berhasil menebak kata Civilian "${activeWordPair.civilian}" dengan sempurna!`,
+            winReason: `Mr. White (${votedPlayer.name}) berhasil menebak kata Civilian "${activeWordPair.civilian}" dengan tepat!`,
             gameHistory: [entry, ...get().gameHistory.slice(0, 19)],
+            pendingNextStage: null,
             stage: "GAME_OVER",
           });
           return true;
@@ -306,9 +341,10 @@ export const useGameStore = create<GameStore>()(
             { name: votedPlayer.name, role: votedPlayer.role, round: currentRound },
           ];
 
+          const note = `Tebakan "${guess.trim()}" salah! Mr. White resmi tereliminasi.`;
           const winCheck = evaluateWinConditions(updatedPlayers);
+
           if (winCheck.isGameOver && winCheck.winner) {
-            sound.playVictory();
             const entry: GameHistoryEntry = {
               id: `hist_${Date.now()}`,
               date: new Date().toLocaleDateString("id-ID"),
@@ -328,19 +364,23 @@ export const useGameStore = create<GameStore>()(
 
             set({
               players: updatedPlayers,
+              votedPlayer,
+              lastEliminatedNote: note,
+              pendingNextStage: "GAME_OVER",
               eliminatedHistory: newHistory,
               winner: winCheck.winner,
               winReason: winCheck.reason || "",
               gameHistory: [entry, ...get().gameHistory.slice(0, 19)],
-              stage: "GAME_OVER",
+              stage: "ELIMINATION_REVEAL",
             });
           } else {
             set({
               players: updatedPlayers,
+              votedPlayer,
+              lastEliminatedNote: note,
+              pendingNextStage: "DISCUSSION",
               eliminatedHistory: newHistory,
-              currentRound: currentRound + 1,
-              currentSpeakerIndex: pickRandomFirstSpeakerIndex(updatedPlayers),
-              stage: "DISCUSSION",
+              stage: "ELIMINATION_REVEAL",
             });
           }
           return false;
@@ -367,6 +407,8 @@ export const useGameStore = create<GameStore>()(
           currentRound: 1,
           currentSpeakerIndex: 0,
           votedPlayer: null,
+          lastEliminatedNote: "",
+          pendingNextStage: null,
           eliminatedHistory: [],
           winner: null,
           winReason: "",

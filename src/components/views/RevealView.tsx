@@ -87,8 +87,9 @@ export function RevealView() {
     setSecondsLeft(REVEAL_DURATION_SECONDS);
     sound.playCardFlip();
 
+    // Gunakan suara netral yang sama untuk semua pemain agar role tidak terbaca dari audio
     if (currentPlayer) {
-      sound.playRoleReveal(currentPlayer.role);
+      sound.playRoleReveal("Civilian");
     }
   };
 
