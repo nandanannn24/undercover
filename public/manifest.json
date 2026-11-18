@@ -1,0 +1,22 @@
+{
+  "name": "UNDERCOVER - Game e Arek-Arek",
+  "short_name": "Undercover",
+  "description": "Social deduction party game pass-and-play modern dengan 1.430+ kata rahasia, kartu 3D flip, dan audio synthesizer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080410",
+  "theme_color": "#080410",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/hantu.PNG",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/hantu.PNG",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

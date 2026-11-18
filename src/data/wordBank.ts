@@ -1,0 +1,3190 @@
+export interface WordPair {
+  id: string;
+  category: string;
+  civilian: string;
+  undercover: string;
+  difficulty: "easy" | "medium" | "hard";
+}
+
+export const WORD_PAIRS: WordPair[] = [
+  {
+    "id": "wp_0001",
+    "category": "Benda Sehari-hari",
+    "civilian": "Pensil",
+    "undercover": "Pulpen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0002",
+    "category": "Benda Sehari-hari",
+    "civilian": "Gelas",
+    "undercover": "Cangkir",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0003",
+    "category": "Benda Sehari-hari",
+    "civilian": "Sepatu",
+    "undercover": "Sandal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0004",
+    "category": "Benda Sehari-hari",
+    "civilian": "Meja",
+    "undercover": "Kursi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0005",
+    "category": "Benda Sehari-hari",
+    "civilian": "Buku",
+    "undercover": "Majalah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0006",
+    "category": "Benda Sehari-hari",
+    "civilian": "Handphone",
+    "undercover": "Tablet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0007",
+    "category": "Benda Sehari-hari",
+    "civilian": "Televisi",
+    "undercover": "Monitor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0008",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kucing",
+    "undercover": "Anjing",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0009",
+    "category": "Benda Sehari-hari",
+    "civilian": "Apel",
+    "undercover": "Jeruk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0010",
+    "category": "Benda Sehari-hari",
+    "civilian": "Nasi",
+    "undercover": "Roti",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0011",
+    "category": "Benda Sehari-hari",
+    "civilian": "Air",
+    "undercover": "Es",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0012",
+    "category": "Benda Sehari-hari",
+    "civilian": "Api",
+    "undercover": "Asap",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0013",
+    "category": "Benda Sehari-hari",
+    "civilian": "Matahari",
+    "undercover": "Bulan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0014",
+    "category": "Benda Sehari-hari",
+    "civilian": "Bintang",
+    "undercover": "Bulan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0015",
+    "category": "Benda Sehari-hari",
+    "civilian": "Laut",
+    "undercover": "Danau",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0016",
+    "category": "Benda Sehari-hari",
+    "civilian": "Gunung",
+    "undercover": "Bukit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0017",
+    "category": "Benda Sehari-hari",
+    "civilian": "Hutan",
+    "undercover": "Kebun",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0018",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kota",
+    "undercover": "Desa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0019",
+    "category": "Benda Sehari-hari",
+    "civilian": "Mobil",
+    "undercover": "Motor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0020",
+    "category": "Benda Sehari-hari",
+    "civilian": "Pesawat",
+    "undercover": "Helikopter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0021",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kapal",
+    "undercover": "Perahu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0022",
+    "category": "Benda Sehari-hari",
+    "civilian": "Sepeda",
+    "undercover": "Becak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0023",
+    "category": "Benda Sehari-hari",
+    "civilian": "Jam",
+    "undercover": "Stopwatch",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0024",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kalender",
+    "undercover": "Agenda",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0025",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kunci",
+    "undercover": "Gembok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0026",
+    "category": "Benda Sehari-hari",
+    "civilian": "Pintu",
+    "undercover": "Jendela",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0027",
+    "category": "Benda Sehari-hari",
+    "civilian": "Lantai",
+    "undercover": "Dinding",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0028",
+    "category": "Benda Sehari-hari",
+    "civilian": "Atap",
+    "undercover": "Plafon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0029",
+    "category": "Benda Sehari-hari",
+    "civilian": "Lampu",
+    "undercover": "Senter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0030",
+    "category": "Benda Sehari-hari",
+    "civilian": "Baterai",
+    "undercover": "Aki",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0031",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kabel",
+    "undercover": "Tali",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0032",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kipas",
+    "undercover": "AC",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0033",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kulkas",
+    "undercover": "Freezer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0034",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kompor",
+    "undercover": "Oven",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0035",
+    "category": "Benda Sehari-hari",
+    "civilian": "Panci",
+    "undercover": "Wajan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0036",
+    "category": "Benda Sehari-hari",
+    "civilian": "Piring",
+    "undercover": "Mangkuk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0037",
+    "category": "Benda Sehari-hari",
+    "civilian": "Sendok",
+    "undercover": "Garpu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0038",
+    "category": "Benda Sehari-hari",
+    "civilian": "Pisau",
+    "undercover": "Gunting",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0039",
+    "category": "Benda Sehari-hari",
+    "civilian": "Sapu",
+    "undercover": "Kemoceng",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0040",
+    "category": "Benda Sehari-hari",
+    "civilian": "Sikat",
+    "undercover": "Spons",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0041",
+    "category": "Benda Sehari-hari",
+    "civilian": "Sabun",
+    "undercover": "Shampoo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0042",
+    "category": "Benda Sehari-hari",
+    "civilian": "Pasta Gigi",
+    "undercover": "Obat Kumur",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0043",
+    "category": "Benda Sehari-hari",
+    "civilian": "Sikat Gigi",
+    "undercover": "Benang Gigi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0044",
+    "category": "Benda Sehari-hari",
+    "civilian": "Handuk",
+    "undercover": "Sapu Tangan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0045",
+    "category": "Benda Sehari-hari",
+    "civilian": "Bantal",
+    "undercover": "Guling",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0046",
+    "category": "Benda Sehari-hari",
+    "civilian": "Selimut",
+    "undercover": "Karpet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0047",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kasur",
+    "undercover": "Dipan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0048",
+    "category": "Benda Sehari-hari",
+    "civilian": "Lemari",
+    "undercover": "Rak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0049",
+    "category": "Benda Sehari-hari",
+    "civilian": "Laci",
+    "undercover": "Kotak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0050",
+    "category": "Benda Sehari-hari",
+    "civilian": "Tas",
+    "undercover": "Ransel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0051",
+    "category": "Benda Sehari-hari",
+    "civilian": "Dompet",
+    "undercover": "Kantong",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0052",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kacamata",
+    "undercover": "Lensa Kontak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0053",
+    "category": "Benda Sehari-hari",
+    "civilian": "Topi",
+    "undercover": "Helm",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0054",
+    "category": "Benda Sehari-hari",
+    "civilian": "Jaket",
+    "undercover": "Sweater",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0055",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kaos",
+    "undercover": "Kemeja",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0056",
+    "category": "Benda Sehari-hari",
+    "civilian": "Celana",
+    "undercover": "Rok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0057",
+    "category": "Benda Sehari-hari",
+    "civilian": "Sepatu",
+    "undercover": "Sendal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0058",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kaus Kaki",
+    "undercover": "Stocking",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0059",
+    "category": "Benda Sehari-hari",
+    "civilian": "Sarung Tangan",
+    "undercover": "Gelang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0060",
+    "category": "Benda Sehari-hari",
+    "civilian": "Kalung",
+    "undercover": "Gelang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0061",
+    "category": "Benda Sehari-hari",
+    "civilian": "Cincin",
+    "undercover": "Anting",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0062",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Sofa",
+    "undercover": "Bangku",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0063",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Tirai",
+    "undercover": "Gorden",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0064",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Cermin",
+    "undercover": "Kaca",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0065",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Ember",
+    "undercover": "Gayung",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0066",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Kloset",
+    "undercover": "Wastafel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0067",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Keran",
+    "undercover": "Shower",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0068",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Keset",
+    "undercover": "Karpet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0069",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Sprei",
+    "undercover": "Sarung",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0070",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Hanger",
+    "undercover": "Jemuran",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0071",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Seterika",
+    "undercover": "Steamer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0072",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Payung",
+    "undercover": "Jas Hujan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0073",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Lilin",
+    "undercover": "Korek",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0074",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Korek Api",
+    "undercover": "Mancis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0075",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Stopkontak",
+    "undercover": "Steker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0076",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Termos",
+    "undercover": "Tumbler",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0077",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Botol",
+    "undercover": "Gelas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0078",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Teko",
+    "undercover": "Cerek",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0079",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Ulekan",
+    "undercover": "Blender",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0080",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Talenan",
+    "undercover": "Pisau",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0081",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Spatula",
+    "undercover": "Sendok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0082",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Parutan",
+    "undercover": "Saringan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0083",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Centong",
+    "undercover": "Sendok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0084",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Cobek",
+    "undercover": "Lumpang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0085",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Panggangan",
+    "undercover": "Pemanggang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0086",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Toples",
+    "undercover": "Kotak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0087",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Sumpit",
+    "undercover": "Garpu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0088",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Sedotan",
+    "undercover": "Sendok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0089",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Serbet",
+    "undercover": "Tisu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0090",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Celemek",
+    "undercover": "Lap",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0091",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Gayung",
+    "undercover": "Ciduk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0092",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Kipas Angin",
+    "undercover": "Exhaust",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0093",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Dispenser",
+    "undercover": "Galon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0094",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Magic Com",
+    "undercover": "Kukusan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0095",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Alat Pel",
+    "undercover": "Kain Pel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0096",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Kapur Barus",
+    "undercover": "Pewangi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0097",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Kran Air",
+    "undercover": "Selang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0098",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Tangga",
+    "undercover": "Kursi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0099",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Palu",
+    "undercover": "Martil",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0100",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Obeng",
+    "undercover": "Tang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0101",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Gergaji",
+    "undercover": "Kapak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0102",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Sendok Bebek",
+    "undercover": "Sendok Sup",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0103",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Garpu Kue",
+    "undercover": "Sendok Teh",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0104",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Wajan Anti Lengket",
+    "undercover": "Kuali",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0105",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Panci Presto",
+    "undercover": "Dandang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0106",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Saringan Santan",
+    "undercover": "Saringan Teh",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0107",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Parutan Keju",
+    "undercover": "Parutan Kelapa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0108",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Korek Gas",
+    "undercover": "Zippo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0109",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Tempat Bekal",
+    "undercover": "Rantang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0110",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Kotak Tisu",
+    "undercover": "Serbet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0111",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Kotak Obat",
+    "undercover": "P3K",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0112",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Timbangan",
+    "undercover": "Meteran",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0113",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Gunting Kuku",
+    "undercover": "Kikir",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0114",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Korek Kuping",
+    "undercover": "Penjepit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0115",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Sisir",
+    "undercover": "Sikat Rambut",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0116",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Bando",
+    "undercover": "Jepit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0117",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Karet Rambut",
+    "undercover": "Jepitan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0118",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Hair Dryer",
+    "undercover": "Catokan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0119",
+    "category": "Benda Rumah & Dapur",
+    "civilian": "Cermin Rias",
+    "undercover": "Kaca Meja",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0120",
+    "category": "Makanan & Minuman",
+    "civilian": "Kopi",
+    "undercover": "Teh",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0121",
+    "category": "Makanan & Minuman",
+    "civilian": "Susu",
+    "undercover": "Yogurt",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0122",
+    "category": "Makanan & Minuman",
+    "civilian": "Jus",
+    "undercover": "Sirup",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0123",
+    "category": "Makanan & Minuman",
+    "civilian": "Cokelat",
+    "undercover": "Permen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0124",
+    "category": "Makanan & Minuman",
+    "civilian": "Biskuit",
+    "undercover": "Kukis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0125",
+    "category": "Makanan & Minuman",
+    "civilian": "Donat",
+    "undercover": "Roti",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0126",
+    "category": "Makanan & Minuman",
+    "civilian": "Pizza",
+    "undercover": "Burger",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0127",
+    "category": "Makanan & Minuman",
+    "civilian": "Spaghetti",
+    "undercover": "Mie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0128",
+    "category": "Makanan & Minuman",
+    "civilian": "Mie",
+    "undercover": "Bihun",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0129",
+    "category": "Makanan & Minuman",
+    "civilian": "Kwetiau",
+    "undercover": "Mie",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0130",
+    "category": "Makanan & Minuman",
+    "civilian": "Bakso",
+    "undercover": "Siomay",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0131",
+    "category": "Makanan & Minuman",
+    "civilian": "Soto",
+    "undercover": "Sup",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0132",
+    "category": "Makanan & Minuman",
+    "civilian": "Rawon",
+    "undercover": "Gulai",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0133",
+    "category": "Makanan & Minuman",
+    "civilian": "Rendang",
+    "undercover": "Semur",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0134",
+    "category": "Makanan & Minuman",
+    "civilian": "Sate",
+    "undercover": "Kebab",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0135",
+    "category": "Makanan & Minuman",
+    "civilian": "Nugget",
+    "undercover": "Sosis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0136",
+    "category": "Makanan & Minuman",
+    "civilian": "Kentang",
+    "undercover": "Ubi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0137",
+    "category": "Makanan & Minuman",
+    "civilian": "Keju",
+    "undercover": "Mentega",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0138",
+    "category": "Makanan & Minuman",
+    "civilian": "Selai",
+    "undercover": "Madu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0139",
+    "category": "Makanan & Minuman",
+    "civilian": "Sambal",
+    "undercover": "Saus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0140",
+    "category": "Makanan & Minuman",
+    "civilian": "Kecap",
+    "undercover": "Saus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0141",
+    "category": "Makanan & Minuman",
+    "civilian": "Garam",
+    "undercover": "Gula",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0142",
+    "category": "Makanan & Minuman",
+    "civilian": "Merica",
+    "undercover": "Ketumbar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0143",
+    "category": "Makanan & Minuman",
+    "civilian": "Bawang",
+    "undercover": "Cabai",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0144",
+    "category": "Makanan & Minuman",
+    "civilian": "Kerupuk",
+    "undercover": "Keripik",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0145",
+    "category": "Makanan & Minuman",
+    "civilian": "Gorengan",
+    "undercover": "Bakwan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0146",
+    "category": "Makanan & Minuman",
+    "civilian": "Tempe",
+    "undercover": "Tahu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0147",
+    "category": "Makanan & Minuman",
+    "civilian": "Telur",
+    "undercover": "Tahu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0148",
+    "category": "Makanan & Minuman",
+    "civilian": "Pempek",
+    "undercover": "Otak-otak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0149",
+    "category": "Makanan & Minuman",
+    "civilian": "Batagor",
+    "undercover": "Siomay",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0150",
+    "category": "Makanan & Minuman",
+    "civilian": "Cilok",
+    "undercover": "Cimol",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0151",
+    "category": "Makanan & Minuman",
+    "civilian": "Cireng",
+    "undercover": "Cilok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0152",
+    "category": "Makanan & Minuman",
+    "civilian": "Martabak",
+    "undercover": "Terang Bulan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0153",
+    "category": "Makanan & Minuman",
+    "civilian": "Bubur",
+    "undercover": "Nasi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0154",
+    "category": "Makanan & Minuman",
+    "civilian": "Lontong",
+    "undercover": "Ketupat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0155",
+    "category": "Makanan & Minuman",
+    "civilian": "Pancake",
+    "undercover": "Waffle",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0156",
+    "category": "Makanan & Minuman",
+    "civilian": "Puding",
+    "undercover": "Agar-agar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0157",
+    "category": "Makanan & Minuman",
+    "civilian": "Es Krim",
+    "undercover": "Gelato",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0158",
+    "category": "Makanan & Minuman",
+    "civilian": "Cendol",
+    "undercover": "Dawet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0159",
+    "category": "Makanan & Minuman",
+    "civilian": "Kolak",
+    "undercover": "Bubur Kacang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0160",
+    "category": "Makanan & Minuman",
+    "civilian": "Croissant",
+    "undercover": "Roti",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0161",
+    "category": "Makanan & Minuman",
+    "civilian": "Bolu",
+    "undercover": "Kue Tart",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0162",
+    "category": "Makanan & Minuman",
+    "civilian": "Brownies",
+    "undercover": "Kue Balok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0163",
+    "category": "Makanan & Minuman",
+    "civilian": "Leker",
+    "undercover": "Crepes",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0164",
+    "category": "Makanan & Minuman",
+    "civilian": "Kue Cubit",
+    "undercover": "Kue Pancong",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0165",
+    "category": "Makanan & Minuman",
+    "civilian": "Klepon",
+    "undercover": "Onde-onde",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0166",
+    "category": "Makanan & Minuman",
+    "civilian": "Lemper",
+    "undercover": "Arem-arem",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0167",
+    "category": "Makanan & Minuman",
+    "civilian": "Pastel",
+    "undercover": "Risoles",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0168",
+    "category": "Makanan & Minuman",
+    "civilian": "Lumpia",
+    "undercover": "Pastel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0169",
+    "category": "Makanan & Minuman",
+    "civilian": "Dimsum",
+    "undercover": "Pangsit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0170",
+    "category": "Makanan & Minuman",
+    "civilian": "Kebab",
+    "undercover": "Shawarma",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0171",
+    "category": "Makanan & Minuman",
+    "civilian": "Lasagna",
+    "undercover": "Macaroni",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0172",
+    "category": "Makanan & Minuman",
+    "civilian": "Steak",
+    "undercover": "Iga Bakar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0173",
+    "category": "Makanan & Minuman",
+    "civilian": "Ayam Goreng",
+    "undercover": "Ayam Bakar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0174",
+    "category": "Makanan & Minuman",
+    "civilian": "Bebek Goreng",
+    "undercover": "Ayam Geprek",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0175",
+    "category": "Makanan & Minuman",
+    "civilian": "Pecel Lele",
+    "undercover": "Ikan Bakar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0176",
+    "category": "Makanan & Minuman",
+    "civilian": "Gado-gado",
+    "undercover": "Karedok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0177",
+    "category": "Makanan & Minuman",
+    "civilian": "Ketoprak",
+    "undercover": "Pecel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0178",
+    "category": "Makanan & Minuman",
+    "civilian": "Sayur Asem",
+    "undercover": "Sayur Lodeh",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0179",
+    "category": "Buah & Sayur",
+    "civilian": "Mangga",
+    "undercover": "Pepaya",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0180",
+    "category": "Buah & Sayur",
+    "civilian": "Pisang",
+    "undercover": "Nanas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0181",
+    "category": "Buah & Sayur",
+    "civilian": "Semangka",
+    "undercover": "Melon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0182",
+    "category": "Buah & Sayur",
+    "civilian": "Stroberi",
+    "undercover": "Ceri",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0183",
+    "category": "Buah & Sayur",
+    "civilian": "Anggur",
+    "undercover": "Kismis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0184",
+    "category": "Buah & Sayur",
+    "civilian": "Durian",
+    "undercover": "Nangka",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0185",
+    "category": "Buah & Sayur",
+    "civilian": "Rambutan",
+    "undercover": "Kelengkeng",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0186",
+    "category": "Buah & Sayur",
+    "civilian": "Salak",
+    "undercover": "Sawo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0187",
+    "category": "Buah & Sayur",
+    "civilian": "Alpukat",
+    "undercover": "Jambu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0188",
+    "category": "Buah & Sayur",
+    "civilian": "Belimbing",
+    "undercover": "Kedondong",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0189",
+    "category": "Buah & Sayur",
+    "civilian": "Tomat",
+    "undercover": "Cabai",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0190",
+    "category": "Buah & Sayur",
+    "civilian": "Wortel",
+    "undercover": "Lobak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0191",
+    "category": "Buah & Sayur",
+    "civilian": "Bayam",
+    "undercover": "Kangkung",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0192",
+    "category": "Buah & Sayur",
+    "civilian": "Sawi",
+    "undercover": "Selada",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0193",
+    "category": "Buah & Sayur",
+    "civilian": "Kubis",
+    "undercover": "Brokoli",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0194",
+    "category": "Buah & Sayur",
+    "civilian": "Buncis",
+    "undercover": "Kacang Panjang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0195",
+    "category": "Buah & Sayur",
+    "civilian": "Jagung",
+    "undercover": "Kacang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0196",
+    "category": "Buah & Sayur",
+    "civilian": "Terong",
+    "undercover": "Labu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0197",
+    "category": "Buah & Sayur",
+    "civilian": "Mentimun",
+    "undercover": "Zukini",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0198",
+    "category": "Buah & Sayur",
+    "civilian": "Kelapa",
+    "undercover": "Santan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0199",
+    "category": "Buah & Sayur",
+    "civilian": "Lemon",
+    "undercover": "Jeruk Nipis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0200",
+    "category": "Buah & Sayur",
+    "civilian": "Kiwi",
+    "undercover": "Markisa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0201",
+    "category": "Buah & Sayur",
+    "civilian": "Delima",
+    "undercover": "Buah Naga",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0202",
+    "category": "Buah & Sayur",
+    "civilian": "Pir",
+    "undercover": "Apel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0203",
+    "category": "Buah & Sayur",
+    "civilian": "Sirsak",
+    "undercover": "Srikaya",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0204",
+    "category": "Buah & Sayur",
+    "civilian": "Blewah",
+    "undercover": "Timun Suri",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0205",
+    "category": "Buah & Sayur",
+    "civilian": "Kembang Kol",
+    "undercover": "Brokoli",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0206",
+    "category": "Buah & Sayur",
+    "civilian": "Tauge",
+    "undercover": "Kedelai",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0207",
+    "category": "Buah & Sayur",
+    "civilian": "Bawang Merah",
+    "undercover": "Bawang Putih",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0208",
+    "category": "Buah & Sayur",
+    "civilian": "Bawang Bombay",
+    "undercover": "Daun Bawang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0209",
+    "category": "Buah & Sayur",
+    "civilian": "Jahe",
+    "undercover": "Kunyit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0210",
+    "category": "Buah & Sayur",
+    "civilian": "Lengkuas",
+    "undercover": "Kencur",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0211",
+    "category": "Buah & Sayur",
+    "civilian": "Serai",
+    "undercover": "Daun Salam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0212",
+    "category": "Buah & Sayur",
+    "civilian": "Kemangi",
+    "undercover": "Daun Jeruk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0213",
+    "category": "Buah & Sayur",
+    "civilian": "Seledri",
+    "undercover": "Daun Bawang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0214",
+    "category": "Hewan & Binatang",
+    "civilian": "Singa",
+    "undercover": "Harimau",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0215",
+    "category": "Hewan & Binatang",
+    "civilian": "Macan",
+    "undercover": "Cheetah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0216",
+    "category": "Hewan & Binatang",
+    "civilian": "Serigala",
+    "undercover": "Rubah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0217",
+    "category": "Hewan & Binatang",
+    "civilian": "Beruang",
+    "undercover": "Panda",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0218",
+    "category": "Hewan & Binatang",
+    "civilian": "Gajah",
+    "undercover": "Badak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0219",
+    "category": "Hewan & Binatang",
+    "civilian": "Kuda",
+    "undercover": "Zebra",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0220",
+    "category": "Hewan & Binatang",
+    "civilian": "Jerapah",
+    "undercover": "Unta",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0221",
+    "category": "Hewan & Binatang",
+    "civilian": "Kambing",
+    "undercover": "Domba",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0222",
+    "category": "Hewan & Binatang",
+    "civilian": "Sapi",
+    "undercover": "Kerbau",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0223",
+    "category": "Hewan & Binatang",
+    "civilian": "Ayam",
+    "undercover": "Bebek",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0224",
+    "category": "Hewan & Binatang",
+    "civilian": "Angsa",
+    "undercover": "Bebek",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0225",
+    "category": "Hewan & Binatang",
+    "civilian": "Elang",
+    "undercover": "Burung Hantu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0226",
+    "category": "Hewan & Binatang",
+    "civilian": "Gagak",
+    "undercover": "Merpati",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0227",
+    "category": "Hewan & Binatang",
+    "civilian": "Kakatua",
+    "undercover": "Beo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0228",
+    "category": "Hewan & Binatang",
+    "civilian": "Hiu",
+    "undercover": "Paus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0229",
+    "category": "Hewan & Binatang",
+    "civilian": "Lumba-lumba",
+    "undercover": "Anjing Laut",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0230",
+    "category": "Hewan & Binatang",
+    "civilian": "Kura-kura",
+    "undercover": "Penyu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0231",
+    "category": "Hewan & Binatang",
+    "civilian": "Katak",
+    "undercover": "Kodok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0232",
+    "category": "Hewan & Binatang",
+    "civilian": "Ular",
+    "undercover": "Cacing",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0233",
+    "category": "Hewan & Binatang",
+    "civilian": "Buaya",
+    "undercover": "Aligator",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0234",
+    "category": "Hewan & Binatang",
+    "civilian": "Bunglon",
+    "undercover": "Kadal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0235",
+    "category": "Hewan & Binatang",
+    "civilian": "Cicak",
+    "undercover": "Tokek",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0236",
+    "category": "Hewan & Binatang",
+    "civilian": "Nyamuk",
+    "undercover": "Lalat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0237",
+    "category": "Hewan & Binatang",
+    "civilian": "Lebah",
+    "undercover": "Tawon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0238",
+    "category": "Hewan & Binatang",
+    "civilian": "Semut",
+    "undercover": "Rayap",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0239",
+    "category": "Hewan & Binatang",
+    "civilian": "Kupu-kupu",
+    "undercover": "Ngengat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0240",
+    "category": "Hewan & Binatang",
+    "civilian": "Kepiting",
+    "undercover": "Lobster",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0241",
+    "category": "Hewan & Binatang",
+    "civilian": "Udang",
+    "undercover": "Cumi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0242",
+    "category": "Hewan & Binatang",
+    "civilian": "Gurita",
+    "undercover": "Cumi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0243",
+    "category": "Hewan & Binatang",
+    "civilian": "Tupai",
+    "undercover": "Hamster",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0244",
+    "category": "Hewan & Binatang",
+    "civilian": "Tikus",
+    "undercover": "Marmut",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0245",
+    "category": "Hewan & Binatang",
+    "civilian": "Kelelawar",
+    "undercover": "Burung",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0246",
+    "category": "Hewan & Binatang",
+    "civilian": "Landak",
+    "undercover": "Trenggiling",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0247",
+    "category": "Hewan & Binatang",
+    "civilian": "Kudanil",
+    "undercover": "Badak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0248",
+    "category": "Hewan & Binatang",
+    "civilian": "Ikan Cupang",
+    "undercover": "Ikan Mas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0249",
+    "category": "Hewan & Binatang",
+    "civilian": "Koi",
+    "undercover": "Arwana",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0250",
+    "category": "Hewan & Binatang",
+    "civilian": "Lele",
+    "undercover": "Belut",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0251",
+    "category": "Hewan & Binatang",
+    "civilian": "Gurame",
+    "undercover": "Nila",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0252",
+    "category": "Hewan & Binatang",
+    "civilian": "Tongkol",
+    "undercover": "Cakalang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0253",
+    "category": "Hewan & Binatang",
+    "civilian": "Kuda Laut",
+    "undercover": "Bintang Laut",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0254",
+    "category": "Hewan & Binatang",
+    "civilian": "Ubur-ubur",
+    "undercover": "Cumi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0255",
+    "category": "Hewan & Binatang",
+    "civilian": "Kumbang",
+    "undercover": "Kepik",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0256",
+    "category": "Hewan & Binatang",
+    "civilian": "Capung",
+    "undercover": "Belalang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0257",
+    "category": "Hewan & Binatang",
+    "civilian": "Jangkrik",
+    "undercover": "Kecoa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0258",
+    "category": "Hewan & Binatang",
+    "civilian": "Burung Gereja",
+    "undercover": "Pipit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0259",
+    "category": "Hewan & Binatang",
+    "civilian": "Merak",
+    "undercover": "Cendrawasih",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0260",
+    "category": "Hewan & Binatang",
+    "civilian": "Pelikan",
+    "undercover": "Bangau",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0261",
+    "category": "Hewan & Binatang",
+    "civilian": "Flamingo",
+    "undercover": "Bangau",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0262",
+    "category": "Alam & Geografi",
+    "civilian": "Sungai",
+    "undercover": "Danau",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0263",
+    "category": "Alam & Geografi",
+    "civilian": "Pantai",
+    "undercover": "Pulau",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0264",
+    "category": "Alam & Geografi",
+    "civilian": "Lembah",
+    "undercover": "Ngarai",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0265",
+    "category": "Alam & Geografi",
+    "civilian": "Gua",
+    "undercover": "Jurang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0266",
+    "category": "Alam & Geografi",
+    "civilian": "Air Terjun",
+    "undercover": "Mata Air",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0267",
+    "category": "Alam & Geografi",
+    "civilian": "Awan",
+    "undercover": "Kabut",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0268",
+    "category": "Alam & Geografi",
+    "civilian": "Hujan",
+    "undercover": "Gerimis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0269",
+    "category": "Alam & Geografi",
+    "civilian": "Salju",
+    "undercover": "Es",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0270",
+    "category": "Alam & Geografi",
+    "civilian": "Petir",
+    "undercover": "Guntur",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0271",
+    "category": "Alam & Geografi",
+    "civilian": "Pelangi",
+    "undercover": "Aurora",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0272",
+    "category": "Alam & Geografi",
+    "civilian": "Bumi",
+    "undercover": "Mars",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0273",
+    "category": "Alam & Geografi",
+    "civilian": "Bintang",
+    "undercover": "Komet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0274",
+    "category": "Alam & Geografi",
+    "civilian": "Pasir",
+    "undercover": "Tanah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0275",
+    "category": "Alam & Geografi",
+    "civilian": "Batu",
+    "undercover": "Kerikil",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0276",
+    "category": "Alam & Geografi",
+    "civilian": "Ombak",
+    "undercover": "Arus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0277",
+    "category": "Alam & Geografi",
+    "civilian": "Lahar",
+    "undercover": "Magma",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0278",
+    "category": "Alam & Geografi",
+    "civilian": "Badai",
+    "undercover": "Topan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0279",
+    "category": "Alam & Geografi",
+    "civilian": "Banjir",
+    "undercover": "Tsunami",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0280",
+    "category": "Alam & Geografi",
+    "civilian": "Gempa",
+    "undercover": "Longsor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0281",
+    "category": "Alam & Geografi",
+    "civilian": "Pelangi",
+    "undercover": "Cahaya",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0282",
+    "category": "Alam & Geografi",
+    "civilian": "Samudra",
+    "undercover": "Laut",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0283",
+    "category": "Alam & Geografi",
+    "civilian": "Teluk",
+    "undercover": "Selat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0284",
+    "category": "Alam & Geografi",
+    "civilian": "Tanjung",
+    "undercover": "Semenanjung",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0285",
+    "category": "Alam & Geografi",
+    "civilian": "Rawa",
+    "undercover": "Waduk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0286",
+    "category": "Alam & Geografi",
+    "civilian": "Kawah",
+    "undercover": "Puncak",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0287",
+    "category": "Alam & Geografi",
+    "civilian": "Gurun",
+    "undercover": "Padang Pasir",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0288",
+    "category": "Alam & Geografi",
+    "civilian": "Sabana",
+    "undercover": "Padang Rumput",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0289",
+    "category": "Alam & Geografi",
+    "civilian": "Matahari Terbit",
+    "undercover": "Matahari Terbenam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0290",
+    "category": "Alam & Geografi",
+    "civilian": "Siang",
+    "undercover": "Malam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0291",
+    "category": "Alam & Geografi",
+    "civilian": "Musim Hujan",
+    "undercover": "Musim Kemarau",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0292",
+    "category": "Alam & Geografi",
+    "civilian": "Embun",
+    "undercover": "Uap",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0293",
+    "category": "Alam & Geografi",
+    "civilian": "Komet",
+    "undercover": "Meteor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0294",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Taksi",
+    "undercover": "Ojek",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0295",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Bus",
+    "undercover": "Angkot",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0296",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Kereta",
+    "undercover": "MRT",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0297",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "KRL",
+    "undercover": "LRT",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0298",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Truk",
+    "undercover": "Pikap",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0299",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Becak",
+    "undercover": "Delman",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0300",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Bajaj",
+    "undercover": "Bemo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0301",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Speedboat",
+    "undercover": "Perahu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0302",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Feri",
+    "undercover": "Kapal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0303",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Jet",
+    "undercover": "Pesawat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0304",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Skuter",
+    "undercover": "Sepeda",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0305",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Bemo",
+    "undercover": "Angkot",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0306",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Traktor",
+    "undercover": "Buldoser",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0307",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Ambulans",
+    "undercover": "Mobil Polisi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0308",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Damkar",
+    "undercover": "Ambulans",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0309",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Stir",
+    "undercover": "Roda",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0310",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Bensin",
+    "undercover": "Solar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0311",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Garasi",
+    "undercover": "Parkir",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0312",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Halte",
+    "undercover": "Stasiun",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0313",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Bandara",
+    "undercover": "Pelabuhan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0314",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Tol",
+    "undercover": "Jembatan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0315",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Motor Matic",
+    "undercover": "Motor Bebek",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0316",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Moge",
+    "undercover": "Motor Sport",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0317",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Sepeda Lipat",
+    "undercover": "Sepeda Gunung",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0318",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Kapal Selam",
+    "undercover": "Penyelam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0319",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Helikopter",
+    "undercover": "Pesawat Capung",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0320",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Kereta Cepat",
+    "undercover": "Kereta Api",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0321",
+    "category": "Kendaraan & Transportasi",
+    "civilian": "Kereta Kencana",
+    "undercover": "Delman",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0322",
+    "category": "Teknologi & Gadget",
+    "civilian": "Laptop",
+    "undercover": "Komputer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0323",
+    "category": "Teknologi & Gadget",
+    "civilian": "Keyboard",
+    "undercover": "Mouse",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0324",
+    "category": "Teknologi & Gadget",
+    "civilian": "Speaker",
+    "undercover": "Headphone",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0325",
+    "category": "Teknologi & Gadget",
+    "civilian": "Earphone",
+    "undercover": "Headset",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0326",
+    "category": "Teknologi & Gadget",
+    "civilian": "Kamera",
+    "undercover": "Webcam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0327",
+    "category": "Teknologi & Gadget",
+    "civilian": "Flashdisk",
+    "undercover": "Hardisk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0328",
+    "category": "Teknologi & Gadget",
+    "civilian": "Charger",
+    "undercover": "Powerbank",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0329",
+    "category": "Teknologi & Gadget",
+    "civilian": "WiFi",
+    "undercover": "Bluetooth",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0330",
+    "category": "Teknologi & Gadget",
+    "civilian": "Router",
+    "undercover": "Modem",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0331",
+    "category": "Teknologi & Gadget",
+    "civilian": "Printer",
+    "undercover": "Scanner",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0332",
+    "category": "Teknologi & Gadget",
+    "civilian": "Proyektor",
+    "undercover": "Monitor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0333",
+    "category": "Teknologi & Gadget",
+    "civilian": "Android",
+    "undercover": "iPhone",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0334",
+    "category": "Teknologi & Gadget",
+    "civilian": "Instagram",
+    "undercover": "TikTok",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0335",
+    "category": "Teknologi & Gadget",
+    "civilian": "YouTube",
+    "undercover": "Netflix",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0336",
+    "category": "Teknologi & Gadget",
+    "civilian": "WhatsApp",
+    "undercover": "Telegram",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0337",
+    "category": "Teknologi & Gadget",
+    "civilian": "Google",
+    "undercover": "Yahoo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0338",
+    "category": "Teknologi & Gadget",
+    "civilian": "Password",
+    "undercover": "PIN",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0339",
+    "category": "Teknologi & Gadget",
+    "civilian": "Layar",
+    "undercover": "Kaca",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0340",
+    "category": "Teknologi & Gadget",
+    "civilian": "Kabel Data",
+    "undercover": "Kabel Cas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0341",
+    "category": "Teknologi & Gadget",
+    "civilian": "Game",
+    "undercover": "Aplikasi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0342",
+    "category": "Teknologi & Gadget",
+    "civilian": "Smart TV",
+    "undercover": "Monitor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0343",
+    "category": "Teknologi & Gadget",
+    "civilian": "PlayStation",
+    "undercover": "Xbox",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0344",
+    "category": "Teknologi & Gadget",
+    "civilian": "Nintendo",
+    "undercover": "Game Boy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0345",
+    "category": "Teknologi & Gadget",
+    "civilian": "TWS",
+    "undercover": "Earphone",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0346",
+    "category": "Teknologi & Gadget",
+    "civilian": "Smartwatch",
+    "undercover": "Jam Tangan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0347",
+    "category": "Teknologi & Gadget",
+    "civilian": "Tablet",
+    "undercover": "iPad",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0348",
+    "category": "Teknologi & Gadget",
+    "civilian": "Drone",
+    "undercover": "Helikopter Mainan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0349",
+    "category": "Teknologi & Gadget",
+    "civilian": "Mic",
+    "undercover": "Speaker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0350",
+    "category": "Teknologi & Gadget",
+    "civilian": "Kamera Mirrorless",
+    "undercover": "DSLR",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0351",
+    "category": "Teknologi & Gadget",
+    "civilian": "Tripod",
+    "undercover": "Tongsis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0352",
+    "category": "Profesi & Tokoh",
+    "civilian": "Dokter",
+    "undercover": "Perawat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0353",
+    "category": "Profesi & Tokoh",
+    "civilian": "Bidan",
+    "undercover": "Perawat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0354",
+    "category": "Profesi & Tokoh",
+    "civilian": "Apoteker",
+    "undercover": "Dokter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0355",
+    "category": "Profesi & Tokoh",
+    "civilian": "Guru",
+    "undercover": "Dosen",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0356",
+    "category": "Profesi & Tokoh",
+    "civilian": "Polisi",
+    "undercover": "Satpam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0357",
+    "category": "Profesi & Tokoh",
+    "civilian": "Tentara",
+    "undercover": "Polisi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0358",
+    "category": "Profesi & Tokoh",
+    "civilian": "Hakim",
+    "undercover": "Jaksa",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0359",
+    "category": "Profesi & Tokoh",
+    "civilian": "Pengacara",
+    "undercover": "Notaris",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0360",
+    "category": "Profesi & Tokoh",
+    "civilian": "Pilot",
+    "undercover": "Masinis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0361",
+    "category": "Profesi & Tokoh",
+    "civilian": "Pramugari",
+    "undercover": "Resepsionis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0362",
+    "category": "Profesi & Tokoh",
+    "civilian": "Koki",
+    "undercover": "Barista",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0363",
+    "category": "Profesi & Tokoh",
+    "civilian": "Pelayan",
+    "undercover": "Kasir",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0364",
+    "category": "Profesi & Tokoh",
+    "civilian": "Arsitek",
+    "undercover": "Mandor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0365",
+    "category": "Profesi & Tokoh",
+    "civilian": "Petani",
+    "undercover": "Nelayan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0366",
+    "category": "Profesi & Tokoh",
+    "civilian": "Wartawan",
+    "undercover": "Fotografer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0367",
+    "category": "Profesi & Tokoh",
+    "civilian": "Pelukis",
+    "undercover": "Desainer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0368",
+    "category": "Profesi & Tokoh",
+    "civilian": "Penyanyi",
+    "undercover": "Musisi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0369",
+    "category": "Profesi & Tokoh",
+    "civilian": "Aktor",
+    "undercover": "Model",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0370",
+    "category": "Profesi & Tokoh",
+    "civilian": "Penulis",
+    "undercover": "Wartawan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0371",
+    "category": "Profesi & Tokoh",
+    "civilian": "Tukang Kayu",
+    "undercover": "Tukang Besi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0372",
+    "category": "Profesi & Tokoh",
+    "civilian": "Tukang Parkir",
+    "undercover": "Satpam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0373",
+    "category": "Profesi & Tokoh",
+    "civilian": "Tukang Cukur",
+    "undercover": "Salon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0374",
+    "category": "Profesi & Tokoh",
+    "civilian": "Montir",
+    "undercover": "Sopir",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0375",
+    "category": "Profesi & Tokoh",
+    "civilian": "Nahkoda",
+    "undercover": "Masinis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0376",
+    "category": "Profesi & Tokoh",
+    "civilian": "Penyelam",
+    "undercover": "Perenang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0377",
+    "category": "Profesi & Tokoh",
+    "civilian": "Petinju",
+    "undercover": "Pegulat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0378",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Celana",
+    "undercover": "Jeans",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0379",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Daster",
+    "undercover": "Piyama",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0380",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Jas",
+    "undercover": "Blazer",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0381",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Rompi",
+    "undercover": "Jaket",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0382",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Batik",
+    "undercover": "Kebaya",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0383",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Jilbab",
+    "undercover": "Pashmina",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0384",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Sarung",
+    "undercover": "Kain",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0385",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Dasi",
+    "undercover": "Kupu-kupu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0386",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Sabuk",
+    "undercover": "Ikat Pinggang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0387",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Sepatu",
+    "undercover": "Boots",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0388",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Sandal",
+    "undercover": "Selop",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0389",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Sneakers",
+    "undercover": "Pantofel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0390",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Ransel",
+    "undercover": "Tas Selempang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0391",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Dompet",
+    "undercover": "Pouch",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0392",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Topi",
+    "undercover": "Kupluk",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0393",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Anting",
+    "undercover": "Giwang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0394",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Gelang",
+    "undercover": "Cincin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0395",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Kalung",
+    "undercover": "Liontin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0396",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Bando",
+    "undercover": "Jepit Rambut",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0397",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Baju Renang",
+    "undercover": "Bikini",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0398",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Hoodie",
+    "undercover": "Sweater",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0399",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Kardigan",
+    "undercover": "Jaket",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0400",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Kemeja Flanel",
+    "undercover": "Kemeja Polos",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0401",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Celana Pendek",
+    "undercover": "Kolor",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0402",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Celana Training",
+    "undercover": "Legging",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0403",
+    "category": "Pakaian & Aksesoris",
+    "civilian": "Kacamata Hitam",
+    "undercover": "Kacamata Baca",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0404",
+    "category": "Olahraga & Hobi",
+    "civilian": "Sepak Bola",
+    "undercover": "Futsal",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0405",
+    "category": "Olahraga & Hobi",
+    "civilian": "Basket",
+    "undercover": "Voli",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0406",
+    "category": "Olahraga & Hobi",
+    "civilian": "Badminton",
+    "undercover": "Tenis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0407",
+    "category": "Olahraga & Hobi",
+    "civilian": "Pingpong",
+    "undercover": "Tenis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0408",
+    "category": "Olahraga & Hobi",
+    "civilian": "Renang",
+    "undercover": "Menyelam",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0409",
+    "category": "Olahraga & Hobi",
+    "civilian": "Lari",
+    "undercover": "Jalan Santai",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0410",
+    "category": "Olahraga & Hobi",
+    "civilian": "Tinju",
+    "undercover": "Karate",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0411",
+    "category": "Olahraga & Hobi",
+    "civilian": "Silat",
+    "undercover": "Kungfu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0412",
+    "category": "Olahraga & Hobi",
+    "civilian": "Golf",
+    "undercover": "Biliar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0413",
+    "category": "Olahraga & Hobi",
+    "civilian": "Bowling",
+    "undercover": "Kelereng",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0414",
+    "category": "Olahraga & Hobi",
+    "civilian": "Catur",
+    "undercover": "Dakon",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0415",
+    "category": "Olahraga & Hobi",
+    "civilian": "Gitar",
+    "undercover": "Bass",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0416",
+    "category": "Olahraga & Hobi",
+    "civilian": "Piano",
+    "undercover": "Keyboard",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0417",
+    "category": "Olahraga & Hobi",
+    "civilian": "Drum",
+    "undercover": "Kendang",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0418",
+    "category": "Olahraga & Hobi",
+    "civilian": "Biola",
+    "undercover": "Gitar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0419",
+    "category": "Olahraga & Hobi",
+    "civilian": "Suling",
+    "undercover": "Terompet",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0420",
+    "category": "Olahraga & Hobi",
+    "civilian": "Bioskop",
+    "undercover": "Teater",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0421",
+    "category": "Olahraga & Hobi",
+    "civilian": "Konser",
+    "undercover": "Pentas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0422",
+    "category": "Olahraga & Hobi",
+    "civilian": "Lukisan",
+    "undercover": "Patung",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0423",
+    "category": "Olahraga & Hobi",
+    "civilian": "Komik",
+    "undercover": "Novel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0424",
+    "category": "Olahraga & Hobi",
+    "civilian": "Catur",
+    "undercover": "Kartu",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0425",
+    "category": "Olahraga & Hobi",
+    "civilian": "Uno",
+    "undercover": "Remi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0426",
+    "category": "Olahraga & Hobi",
+    "civilian": "Monopoli",
+    "undercover": "Ular Tangga",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0427",
+    "category": "Olahraga & Hobi",
+    "civilian": "Layangan",
+    "undercover": "Gasing",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0428",
+    "category": "Olahraga & Hobi",
+    "civilian": "Skateboard",
+    "undercover": "Sepatu Roda",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0429",
+    "category": "Olahraga & Hobi",
+    "civilian": "Senam",
+    "undercover": "Yoga",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0430",
+    "category": "Olahraga & Hobi",
+    "civilian": "Fitness",
+    "undercover": "Gym",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0431",
+    "category": "Sekolah & Kantor",
+    "civilian": "Pulpen",
+    "undercover": "Spidol",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0432",
+    "category": "Sekolah & Kantor",
+    "civilian": "Penghapus",
+    "undercover": "Tip-Ex",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0433",
+    "category": "Sekolah & Kantor",
+    "civilian": "Penggaris",
+    "undercover": "Jangka",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0434",
+    "category": "Sekolah & Kantor",
+    "civilian": "Buku Tulis",
+    "undercover": "Buku Gambar",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0435",
+    "category": "Sekolah & Kantor",
+    "civilian": "Buku Cetak",
+    "undercover": "Modul",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0436",
+    "category": "Sekolah & Kantor",
+    "civilian": "Map",
+    "undercover": "Amplop",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0437",
+    "category": "Sekolah & Kantor",
+    "civilian": "Kertas",
+    "undercover": "Karton",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0438",
+    "category": "Sekolah & Kantor",
+    "civilian": "Lem",
+    "undercover": "Solasi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0439",
+    "category": "Sekolah & Kantor",
+    "civilian": "Stapler",
+    "undercover": "Klip",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0440",
+    "category": "Sekolah & Kantor",
+    "civilian": "Gunting",
+    "undercover": "Cutter",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0441",
+    "category": "Sekolah & Kantor",
+    "civilian": "Rapor",
+    "undercover": "Ijazah",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0442",
+    "category": "Sekolah & Kantor",
+    "civilian": "Ujian",
+    "undercover": "Kuis",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0443",
+    "category": "Sekolah & Kantor",
+    "civilian": "Skripsi",
+    "undercover": "Tugas Akhir",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0444",
+    "category": "Sekolah & Kantor",
+    "civilian": "Kantin",
+    "undercover": "Koperasi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0445",
+    "category": "Sekolah & Kantor",
+    "civilian": "Upacara",
+    "undercover": "Apel",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0446",
+    "category": "Sekolah & Kantor",
+    "civilian": "Papan Tulis",
+    "undercover": "Spidol",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0447",
+    "category": "Sekolah & Kantor",
+    "civilian": "Absensi",
+    "undercover": "Tanda Tangan",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0448",
+    "category": "Sekolah & Kantor",
+    "civilian": "Seragam",
+    "undercover": "Batik",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0449",
+    "category": "Sekolah & Kantor",
+    "civilian": "Meja Belajar",
+    "undercover": "Laci",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0450",
+    "category": "Sekolah & Kantor",
+    "civilian": "Bel Sekolah",
+    "undercover": "Alarm",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0451",
+    "category": "Sekolah & Kantor",
+    "civilian": "Spidol",
+    "undercover": "Stabilo",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0452",
+    "category": "Sekolah & Kantor",
+    "civilian": "Krayon",
+    "undercover": "Pensil Warna",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0453",
+    "category": "Sekolah & Kantor",
+    "civilian": "Cat Air",
+    "undercover": "Kuas",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wp_0454",
+    "category": "Sekolah & Kantor",
+    "civilian": "Kalkulator",
+    "undercover": "Abakus",
+    "difficulty": "easy"
+  }
+];
+
+export const WORD_CATEGORIES = Array.from(new Set(WORD_PAIRS.map(p => p.category))).sort();
