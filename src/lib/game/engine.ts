@@ -5,21 +5,30 @@ import { AVATAR_OPTIONS } from "@/components/CartoonAvatar";
 export const DEFAULT_AVATARS = AVATAR_OPTIONS;
 
 /**
- * Cryptographically secure random integer between min and max (inclusive)
+ * Cryptographically secure unbiased random integer in [min, max] (inclusive)
+ * Uses rejection sampling to completely eliminate modulo bias.
  */
 export function getRandomInt(min: number, max: number): number {
   if (min >= max) return min;
   const range = max - min + 1;
+
   if (typeof crypto !== "undefined" && crypto.getRandomValues) {
-    const uintArray = new Uint32Array(1);
-    crypto.getRandomValues(uintArray);
-    return min + (uintArray[0] % range);
+    const maxUint32 = 0xffffffff;
+    const limit = maxUint32 - ((maxUint32 + 1) % range);
+    const buf = new Uint32Array(1);
+    let value: number;
+    do {
+      crypto.getRandomValues(buf);
+      value = buf[0];
+    } while (value > limit);
+    return min + (value % range);
   }
+
   return Math.floor(Math.random() * range) + min;
 }
 
 /**
- * Cryptographically secure Fisher-Yates shuffle
+ * Cryptographically secure unbiased Fisher-Yates shuffle.
  */
 export function shuffle<T>(array: T[]): T[] {
   const arr = [...array];
@@ -47,16 +56,19 @@ export function validateSetup(config: GameConfig): { isValid: boolean; error?: s
 }
 
 /**
- * Select a truly random word pair, avoiding recently used pairs in the current session
+ * Select a highly randomized word pair:
+ * - Avoids recently used word IDs until pool is exhausted
+ * - Avoids repeating the same category back-to-back when alternatives exist
+ * - Randomly flips Civilian <-> Undercover word direction (50/50) so pairs cannot be memorized
  */
 export function selectWordPair(
   config: GameConfig,
   availableWords: WordPair[] = WORD_PAIRS,
-  excludedIds: string[] = []
+  excludedIds: string[] = [],
+  lastCategory?: string
 ): WordPair {
-  let pool = availableWords;
+  let pool = [...availableWords];
 
-  // Filter category if specified
   if (config.selectedCategories && config.selectedCategories.length > 0) {
     const catFiltered = pool.filter((w) => config.selectedCategories.includes(w.category));
     if (catFiltered.length > 0) {
@@ -64,7 +76,6 @@ export function selectWordPair(
     }
   }
 
-  // Filter difficulty if specified
   if (config.difficulty && config.difficulty !== "all") {
     const diffFiltered = pool.filter((w) => w.difficulty === config.difficulty);
     if (diffFiltered.length > 0) {
@@ -72,7 +83,6 @@ export function selectWordPair(
     }
   }
 
-  // Filter out recently used pairs if pool is large enough
   if (excludedIds.length > 0) {
     const freshPool = pool.filter((w) => !excludedIds.includes(w.id));
     if (freshPool.length > 0) {
@@ -80,66 +90,85 @@ export function selectWordPair(
     }
   }
 
-  if (pool.length === 0) {
-    pool = availableWords;
+  if (lastCategory) {
+    const diffCategoryPool = pool.filter((w) => w.category !== lastCategory);
+    if (diffCategoryPool.length > 0) {
+      pool = diffCategoryPool;
+    }
   }
 
-  const randomIndex = getRandomInt(0, pool.length - 1);
-  return pool[randomIndex];
+  if (pool.length === 0) {
+    pool = [...availableWords];
+  }
+
+  const shuffledPool = shuffle(pool);
+  const picked = shuffledPool[getRandomInt(0, shuffledPool.length - 1)];
+
+  // 50/50 random swap between civilian & undercover word so players can't memorize word order
+  const shouldSwapDirection = getRandomInt(0, 1) === 1;
+  if (shouldSwapDirection) {
+    return {
+      ...picked,
+      civilian: picked.undercover,
+      undercover: picked.civilian,
+    };
+  }
+
+  return { ...picked };
 }
 
 /**
- * Distribute roles and words cleanly across players.
- * Preserves player seating order and player names 100%.
- * Guarantees Mr. White is NEVER assigned to player index 0 (first speaker).
+ * Exact-uniform role & word distribution:
+ * - Mr. White is strictly NEVER placed at index 0 (first turn), uniformly distributed across indices [1..N-1].
+ * - Undercover is completely FREE to land on ANY index [0..N-1], including index 0 (first turn).
+ * - Remaining slots are uniformly filled with Civilian & Undercover using unbiased crypto Fisher-Yates.
  */
 export function distributeRolesAndWords(
   playerNames: { name: string; avatar: string; color: string }[],
   config: GameConfig,
   wordPair: WordPair
 ): Player[] {
-  const roles: Role[] = [];
+  const n = playerNames.length;
+  const assignedRoles: Role[] = new Array<Role>(n).fill("Civilian");
 
-  // 1. Add Mr. White count
-  for (let i = 0; i < config.mrWhiteCount; i++) {
-    roles.push("Mr. White");
+  // 1. Place Mr. White strictly in indices [1 .. n-1] (NEVER index 0)
+  const mrWhiteCount = Math.min(config.mrWhiteCount, Math.max(0, n - 1));
+  const nonFirstIndices: number[] = [];
+  for (let i = 1; i < n; i++) {
+    nonFirstIndices.push(i);
+  }
+  const mrWhiteSlots = new Set<number>(shuffle(nonFirstIndices).slice(0, mrWhiteCount));
+  for (const slot of mrWhiteSlots) {
+    assignedRoles[slot] = "Mr. White";
   }
 
-  // 2. Add Undercover count
-  for (let i = 0; i < config.undercoverCount; i++) {
-    roles.push("Undercover");
-  }
-
-  // 3. Fill the rest with Civilian
-  while (roles.length < playerNames.length) {
-    roles.push("Civilian");
-  }
-
-  // 4. Crypto-shuffle roles array
-  let shuffledRoles = shuffle(roles);
-
-  // 5. Hard Guarantee: Mr. White is NEVER the first speaker (index 0).
-  // We swap within the roles array before mapping to players, ensuring seating order is completely intact.
-  if (shuffledRoles[0] === "Mr. White" && shuffledRoles.length > 1) {
-    // Find non-Mr. White index to swap with
-    const nonMrWhiteIndices: number[] = [];
-    for (let i = 1; i < shuffledRoles.length; i++) {
-      if (shuffledRoles[i] !== "Mr. White") {
-        nonMrWhiteIndices.push(i);
-      }
-    }
-
-    if (nonMrWhiteIndices.length > 0) {
-      const targetIdx = nonMrWhiteIndices[getRandomInt(0, nonMrWhiteIndices.length - 1)];
-      const temp = shuffledRoles[0];
-      shuffledRoles[0] = shuffledRoles[targetIdx];
-      shuffledRoles[targetIdx] = temp;
+  // 2. Collect all remaining slots (INCLUDING index 0!) for Undercover + Civilian
+  const remainingSlots: number[] = [];
+  for (let i = 0; i < n; i++) {
+    if (!mrWhiteSlots.has(i)) {
+      remainingSlots.push(i);
     }
   }
 
-  // 6. Map to Player objects keeping exact name & avatar positions
+  // 3. Shuffle both remaining slots and remaining roles (Undercover is completely free to be index 0!)
+  const shuffledSlots = shuffle(remainingSlots);
+  const undercoverCount = Math.min(config.undercoverCount, shuffledSlots.length);
+  const remainingRoles: Role[] = [];
+  for (let i = 0; i < undercoverCount; i++) {
+    remainingRoles.push("Undercover");
+  }
+  while (remainingRoles.length < shuffledSlots.length) {
+    remainingRoles.push("Civilian");
+  }
+  const shuffledRemainingRoles = shuffle(remainingRoles);
+
+  for (let i = 0; i < shuffledSlots.length; i++) {
+    assignedRoles[shuffledSlots[i]] = shuffledRemainingRoles[i];
+  }
+
+  // 4. Map to Player objects preserving exact seating order and names
   const players: Player[] = playerNames.map((p, index) => {
-    const role = shuffledRoles[index];
+    const role = assignedRoles[index];
     let clue = "";
     if (role === "Civilian") {
       clue = wordPair.civilian;
@@ -162,6 +191,25 @@ export function distributeRolesAndWords(
   });
 
   return players;
+}
+
+/**
+ * Pick a random starting speaker index among active players where Mr. White is NEVER first.
+ * Undercover and Civilian are both equally eligible to speak first.
+ */
+export function pickRandomFirstSpeakerIndex(players: Player[]): number {
+  const activePlayers = players.filter((p) => !p.isEliminated);
+  if (activePlayers.length <= 1) return 0;
+
+  const eligibleIndices: number[] = [];
+  for (let i = 0; i < activePlayers.length; i++) {
+    if (activePlayers[i].role !== "Mr. White") {
+      eligibleIndices.push(i);
+    }
+  }
+
+  if (eligibleIndices.length === 0) return 0;
+  return eligibleIndices[getRandomInt(0, eligibleIndices.length - 1)];
 }
 
 export interface WinConditionResult {

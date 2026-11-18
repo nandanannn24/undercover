@@ -29,14 +29,32 @@ export function SecretRoleCard({
       : "/characters/mr_white.png";
 
   return (
-    <div className="w-[300px] sm:w-[325px] h-[470px] sm:h-[500px] perspective-[1200px] mx-auto select-none relative z-20">
+    <div
+      className="w-[300px] sm:w-[325px] h-[470px] sm:h-[500px] mx-auto select-none relative z-20"
+      style={{ perspective: 1200, WebkitPerspective: 1200 }}
+    >
       <motion.div
-        className="w-full h-full relative preserve-3d rounded-3xl transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+        className="w-full h-full relative rounded-3xl"
+        style={{
+          transformStyle: "preserve-3d",
+          WebkitTransformStyle: "preserve-3d",
+        }}
+        initial={false}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.56, ease: [0.22, 1, 0.36, 1] }}
       >
         {/* FRONT OF CARD (Vertical Portrait Mystery Card) */}
-        <div
-          className={`absolute inset-0 backface-hidden rounded-3xl bg-gradient-to-b from-[#2a144e] via-[#1b0d33] to-[#110722] border-2 border-[#d4af37] p-5 sm:p-6 flex flex-col justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_0_24px_rgba(212,175,55,0.18)] overflow-hidden ${
+        <motion.div
+          aria-hidden={isFlipped}
+          initial={false}
+          animate={{ opacity: isFlipped ? 0 : 1 }}
+          transition={{ duration: 0.04, delay: 0.2 }}
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(0deg) translateZ(1px)",
+          }}
+          className={`absolute inset-0 rounded-3xl bg-gradient-to-b from-[#2a144e] via-[#1b0d33] to-[#110722] border-2 border-[#d4af37] p-5 sm:p-6 flex flex-col justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_0_24px_rgba(212,175,55,0.18)] overflow-hidden ${
             isFlipped ? "pointer-events-none" : ""
           }`}
         >
@@ -97,19 +115,28 @@ export function SecretRoleCard({
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
             <span>Sekali buka • Jangan sampai terlihat orang lain!</span>
           </div>
-        </div>
+        </motion.div>
 
         {/* BACK OF CARD (Revealed Role & Word with 5s Cooldown Timer) */}
-        <div
-          className={`absolute inset-0 backface-hidden rotate-y-180 rounded-3xl border-2 p-5 sm:p-6 flex flex-col justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.85)] backdrop-blur-2xl overflow-hidden ${
+        <motion.div
+          aria-hidden={!isFlipped}
+          initial={false}
+          animate={{ opacity: isFlipped ? 1 : 0 }}
+          transition={{ duration: 0.04, delay: 0.2 }}
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(180deg) translateZ(1px)",
+          }}
+          className={`absolute inset-0 rounded-3xl border-2 p-5 sm:p-6 flex flex-col justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.85)] overflow-hidden ${
             !isFlipped ? "pointer-events-none" : ""
           } ${
             isMrWhite
               ? "bg-gradient-to-b from-[#24133d] to-[#11071f] border-purple-400/60 shadow-purple-950/50"
               : isUndercover
-              ? "bg-gradient-to-b from-[#3b0d23] to-[#17040e] border-rose-500/60 shadow-rose-950/50"
-              : "bg-gradient-to-b from-[#0e2747] to-[#061224] border-sky-400/60 shadow-sky-950/50"
-            }`}
+                ? "bg-gradient-to-b from-[#3b0d23] to-[#17040e] border-rose-500/60 shadow-rose-950/50"
+                : "bg-gradient-to-b from-[#0e2747] to-[#061224] border-sky-400/60 shadow-sky-950/50"
+          }`}
         >
           {/* Inner decorative border */}
           <div className="absolute inset-2 rounded-2xl border border-white/10 pointer-events-none" />
@@ -120,12 +147,13 @@ export function SecretRoleCard({
               {player.name}
             </span>
             <div
-              className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm flex items-center gap-1 ${isMrWhite
-                ? "bg-purple-900/70 text-purple-200 border border-purple-400/50"
-                : isUndercover
-                  ? "bg-rose-900/70 text-rose-200 border border-rose-400/50"
-                  : "bg-sky-900/70 text-sky-200 border border-sky-400/50"
-                }`}
+              className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm flex items-center gap-1 ${
+                isMrWhite
+                  ? "bg-purple-900/70 text-purple-200 border border-purple-400/50"
+                  : isUndercover
+                    ? "bg-rose-900/70 text-rose-200 border border-rose-400/50"
+                    : "bg-sky-900/70 text-sky-200 border border-sky-400/50"
+              }`}
             >
               {isMrWhite ? <HelpCircle className="w-3 h-3" /> : <Sparkles className="w-3 h-3" />}
               <span>{player.role}</span>
@@ -160,19 +188,21 @@ export function SecretRoleCard({
               </div>
             ) : (
               <div
-                className={`p-3.5 rounded-2xl w-full border shadow-inner ${isUndercover
-                  ? "bg-black/50 border-rose-500/40"
-                  : "bg-black/50 border-sky-500/40"
-                  }`}
+                className={`p-3.5 rounded-2xl w-full border shadow-inner ${
+                  isUndercover
+                    ? "bg-black/50 border-rose-500/40"
+                    : "bg-black/50 border-sky-500/40"
+                }`}
               >
                 <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-0.5">
                   KATA RAHASIA ANDA
                 </span>
                 <h2
-                  className={`font-cinzel text-2xl sm:text-3xl font-black tracking-wide my-0.5 ${isUndercover
-                    ? "text-rose-300 drop-shadow-[0_0_12px_rgba(244,63,94,0.4)]"
-                    : "text-amber-200 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)]"
-                    }`}
+                  className={`font-cinzel text-2xl sm:text-3xl font-black tracking-wide my-0.5 ${
+                    isUndercover
+                      ? "text-rose-300 drop-shadow-[0_0_12px_rgba(244,63,94,0.4)]"
+                      : "text-amber-200 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)]"
+                  }`}
                 >
                   {player.clue}
                 </h2>
@@ -199,7 +229,7 @@ export function SecretRoleCard({
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

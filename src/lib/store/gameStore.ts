@@ -3,11 +3,13 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { GameConfig, GameStage, Player, Role, GameHistoryEntry } from "../game/types";
-import { WordPair } from "@/data/wordBank";
+import { WordPair, WORD_PAIRS } from "@/data/wordBank";
 import {
   DEFAULT_AVATARS,
+  shuffle,
   selectWordPair,
   distributeRolesAndWords,
+  pickRandomFirstSpeakerIndex,
   evaluateWinConditions,
   checkMrWhiteGuess,
 } from "../game/engine";
@@ -37,6 +39,8 @@ interface GameStore {
   winReason: string;
 
   gameHistory: GameHistoryEntry[];
+  usedWordIds: string[];
+  lastWordCategory: string;
 
   initPlayerInputs: (count: number) => void;
   startNewGame: () => boolean;
@@ -104,6 +108,8 @@ export const useGameStore = create<GameStore>()(
       winner: null,
       winReason: "",
       gameHistory: [],
+      usedWordIds: [],
+      lastWordCategory: "",
 
       initPlayerInputs: (count: number) => {
         const current = get().playerInputs;
@@ -120,7 +126,7 @@ export const useGameStore = create<GameStore>()(
       },
 
       startNewGame: () => {
-        const { config, playerInputs } = get();
+        const { config, playerInputs, usedWordIds, lastWordCategory } = get();
         const syncedInputs = Array.from({ length: config.playerCount }, (_, i) => {
           if (playerInputs[i]) return playerInputs[i];
           const av = DEFAULT_AVATARS[i % DEFAULT_AVATARS.length];
@@ -130,13 +136,17 @@ export const useGameStore = create<GameStore>()(
             color: av.borderColor,
           };
         });
-        const wordPair = selectWordPair(config);
+
+        const activeExcluded = usedWordIds.length >= WORD_PAIRS.length ? [] : usedWordIds;
+        const wordPair = selectWordPair(config, WORD_PAIRS, activeExcluded, lastWordCategory);
         const distributed = distributeRolesAndWords(syncedInputs, config, wordPair);
 
         set({
           playerInputs: syncedInputs,
           players: distributed,
           activeWordPair: wordPair,
+          usedWordIds: [...activeExcluded, wordPair.id],
+          lastWordCategory: wordPair.category,
           currentRevealIndex: 0,
           isCardFlipped: false,
           currentRound: 1,
@@ -247,7 +257,7 @@ export const useGameStore = create<GameStore>()(
             players: updatedPlayers,
             eliminatedHistory: newHistory,
             currentRound: currentRound + 1,
-            currentSpeakerIndex: 0,
+            currentSpeakerIndex: pickRandomFirstSpeakerIndex(updatedPlayers),
             stage: "DISCUSSION",
           });
         }
@@ -329,7 +339,7 @@ export const useGameStore = create<GameStore>()(
               players: updatedPlayers,
               eliminatedHistory: newHistory,
               currentRound: currentRound + 1,
-              currentSpeakerIndex: 0,
+              currentSpeakerIndex: pickRandomFirstSpeakerIndex(updatedPlayers),
               stage: "DISCUSSION",
             });
           }
@@ -338,6 +348,8 @@ export const useGameStore = create<GameStore>()(
       },
 
       playAgainSamePlayers: () => {
+        const shuffledInputs = shuffle(get().playerInputs);
+        set({ playerInputs: shuffledInputs });
         get().startNewGame();
       },
 
@@ -367,6 +379,8 @@ export const useGameStore = create<GameStore>()(
         config: state.config,
         playerInputs: state.playerInputs,
         gameHistory: state.gameHistory,
+        usedWordIds: state.usedWordIds,
+        lastWordCategory: state.lastWordCategory,
       }),
     }
   )
