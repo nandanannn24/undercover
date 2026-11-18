@@ -40,8 +40,8 @@ export default function HistoryPage() {
 
   const totalGames = mergedHistory.length;
   const civilianWins = mergedHistory.filter((h) => h.winner === "Civilian").length;
-  const undercoverWins = mergedHistory.filter((h) => h.winner === "Undercover").length;
-  const mrWhiteWins = mergedHistory.filter((h) => h.winner === "Mr. White").length;
+  const undercoverWins = mergedHistory.filter((h) => h.winner === "Undercover" || h.winner === "Penyusup").length;
+  const mrWhiteWins = mergedHistory.filter((h) => h.winner === "Mr. White" || h.winner === "Penyusup").length;
 
   return (
     <div className="min-h-screen text-[#f0e6d2] p-4 sm:p-6 pb-20 relative font-sans">
@@ -141,6 +141,7 @@ export default function HistoryPage() {
             mergedHistory.map((h) => {
               const isCiv = h.winner === "Civilian";
               const isUnd = h.winner === "Undercover";
+              const isJoint = h.winner === "Penyusup";
 
               return (
                 <div
@@ -154,10 +155,12 @@ export default function HistoryPage() {
                           ? "bg-sky-950/80 text-sky-300 border-sky-400/40"
                           : isUnd
                           ? "bg-rose-950/80 text-rose-300 border-rose-400/40"
+                          : isJoint
+                          ? "bg-amber-950/80 text-amber-300 border-amber-400/50"
                           : "bg-purple-950/80 text-purple-300 border-purple-400/40"
                       }`}
                     >
-                      Pemenang: {h.winner}
+                      Pemenang: {isJoint ? "Tim Penyusup (UC & Mr. White)" : h.winner}
                     </span>
                     <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1">
                       <Calendar className="w-3.5 h-3.5" />

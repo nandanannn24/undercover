@@ -35,12 +35,17 @@ export function GameOverView() {
   const isCivilian = winner === "Civilian";
   const isUndercover = winner === "Undercover";
   const isMrWhite = winner === "Mr. White";
+  const isJointInfiltrators = winner === "Penyusup";
 
   const winnerImage = isCivilian
     ? "/characters/civilian.png"
     : isUndercover
     ? "/characters/undercover.png"
     : "/characters/mr_white.png";
+
+  const winnerTitle = isJointInfiltrators
+    ? "Tim Penyusup Menang!"
+    : `${winner} Menang!`;
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-3 sm:py-6 z-10">
@@ -54,28 +59,57 @@ export function GameOverView() {
               ? "border-sky-400/60 shadow-sky-950/50"
               : isUndercover
               ? "border-rose-500/60 shadow-rose-950/50"
+              : isJointInfiltrators
+              ? "border-amber-400/70 shadow-rose-950/60"
               : "border-purple-400/60 shadow-purple-950/50"
           }`}
         >
           {/* Winner 3D Character Illustration */}
-          <div className="relative w-28 h-36 sm:w-32 sm:h-42 mx-auto mb-2 drop-shadow-[0_16px_32px_rgba(0,0,0,0.8)] animate-float-ghost">
-            <Image
-              src={winnerImage}
-              alt={winner || "Winner"}
-              fill
-              sizes="(max-width: 640px) 112px, 128px"
-              className="object-contain"
-              priority
-            />
-          </div>
+          {isJointInfiltrators ? (
+            <div className="flex items-center justify-center -space-x-4 mx-auto mb-2 animate-float-ghost">
+              <div className="relative w-24 h-32 sm:w-28 sm:h-36 -rotate-6 drop-shadow-[0_16px_32px_rgba(244,63,94,0.45)]">
+                <Image
+                  src="/characters/undercover.png"
+                  alt="Undercover"
+                  fill
+                  sizes="(max-width: 640px) 96px, 112px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="relative w-24 h-32 sm:w-28 sm:h-36 rotate-6 drop-shadow-[0_16px_32px_rgba(192,132,252,0.45)]">
+                <Image
+                  src="/characters/mr_white.png"
+                  alt="Mr. White"
+                  fill
+                  sizes="(max-width: 640px) 96px, 112px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="relative w-28 h-36 sm:w-32 sm:h-42 mx-auto mb-2 drop-shadow-[0_16px_32px_rgba(0,0,0,0.8)] animate-float-ghost">
+              <Image
+                src={winnerImage}
+                alt={winner || "Winner"}
+                fill
+                sizes="(max-width: 640px) 112px, 128px"
+                className="object-contain"
+                priority
+              />
+            </div>
+          )}
 
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 border border-amber-500/30 text-amber-300 text-[10px] font-mono font-bold tracking-widest uppercase mb-2">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            <span>PERMAINAN SELESAI</span>
+            <span>
+              {isJointInfiltrators ? "UNDERCOVER & MR. WHITE" : "PERMAINAN SELESAI"}
+            </span>
           </div>
 
           <h2 className="font-cinzel text-3xl sm:text-4xl font-black text-amber-100 tracking-wide mb-1.5">
-            {winner} Menang!
+            {winnerTitle}
           </h2>
           <p className="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed max-w-lg mx-auto">
             {winReason}

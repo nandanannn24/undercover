@@ -309,7 +309,7 @@ export function LobbyView() {
                   </p>
                   <div className="text-[11px] text-amber-200/90 font-medium flex items-center justify-center sm:justify-start gap-1.5">
                     <CheckCircle2 className="w-3.5 h-3.5 text-rose-400 shrink-0" />
-                    <span>Menang jika jumlah Undercover menyamai atau melebihi Civilian yang tersisa.</span>
+                    <span>Menang jika bertahan hingga Civilian hanya tersisa 1 orang (bisa menang bersama Mr. White).</span>
                   </div>
                 </>
               )}
@@ -325,7 +325,7 @@ export function LobbyView() {
                   </p>
                   <div className="text-[11px] text-amber-200/90 font-medium flex items-center justify-center sm:justify-start gap-1.5">
                     <CheckCircle2 className="w-3.5 h-3.5 text-purple-400 shrink-0" />
-                    <span>Jika tereliminasi, dapat kesempatan terakhir menebak kata Civilian untuk menang langsung!</span>
+                    <span>Menang otomatis jika bertahan hingga Civilian sisa 1, atau saat tertangkap berhasil menebak kata Civilian!</span>
                   </div>
                 </>
               )}

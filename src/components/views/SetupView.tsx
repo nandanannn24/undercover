@@ -278,14 +278,14 @@ export function SetupView() {
                 <span>Aturan Kemenangan Cepat:</span>
               </div>
               <p className="text-[11px] text-slate-300 leading-relaxed">
-                • Civilian menang saat seluruh penyusup tereliminasi.
+                • Civilian menang saat seluruh Undercover dan Mr. White tereliminasi.
               </p>
               <p className="text-[11px] text-slate-300 leading-relaxed">
-                • Undercover menang jika jumlah mereka tersisa sama dengan Civilian.
+                • Penyusup (Undercover / Mr. White) langsung menang jika Civilian tinggal 1 orang.
               </p>
               {config.mrWhiteCount > 0 && (
                 <p className="text-[11px] text-purple-300 leading-relaxed">
-                  • Mr. White menang instan jika tebakan kata terakhirnya tepat!
+                  • Mr. White juga menang instan jika berhasil menebak kata Civilian saat tertangkap!
                 </p>
               )}
             </div>

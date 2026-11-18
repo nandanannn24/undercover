@@ -2,7 +2,7 @@
 
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { GameConfig, GameStage, Player, Role, GameHistoryEntry } from "../game/types";
+import { GameConfig, GameStage, Player, Role, Winner, GameHistoryEntry } from "../game/types";
 import { WordPair, WORD_PAIRS } from "@/data/wordBank";
 import {
   DEFAULT_AVATARS,
@@ -37,7 +37,7 @@ interface GameStore {
   lastEliminatedNote: string;
   pendingNextStage: "DISCUSSION" | "GAME_OVER" | null;
   eliminatedHistory: { name: string; role: Role; round: number }[];
-  winner: Role | null;
+  winner: Winner | null;
   winReason: string;
 
   gameHistory: GameHistoryEntry[];

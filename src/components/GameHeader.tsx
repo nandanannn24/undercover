@@ -122,7 +122,7 @@ export function GameHeader() {
                   2. Undercover (Penyusup)
                 </h4>
                 <p className="text-slate-300 text-xs">
-                  Menerima kata serupa yang masih satu rumpun. Cari tahu apakah Anda adalah Undercover dan berbaurlah agar tidak dicurigai!
+                  Menerima kata serupa yang masih satu rumpun (tanpa label role). Berbaurlah dan bertahan hingga Civilian tinggal 1 orang untuk menang!
                 </p>
               </div>
 
@@ -132,7 +132,7 @@ export function GameHeader() {
                   3. Mr. White (Penyusup Buta)
                 </h4>
                 <p className="text-slate-300 text-xs">
-                  Tidak memiliki kata sama sekali! Karang deskripsi Anda. Jika tertangkap saat voting, tebak kata Civilian untuk <strong>langsung memenangkan game!</strong>
+                  Tidak memiliki kata sama sekali! Menang otomatis jika bertahan hingga Civilian sisa 1, atau jika tertangkap saat voting dan berhasil menebak kata Civilian!
                 </p>
               </div>
 

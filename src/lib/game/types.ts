@@ -1,4 +1,5 @@
 export type Role = "Civilian" | "Undercover" | "Mr. White";
+export type Winner = Role | "Penyusup";
 
 export type GameStage =
   | "LOBBY"
@@ -37,7 +38,7 @@ export interface GameConfig {
 export interface GameHistoryEntry {
   id: string;
   date: string;
-  winner: Role;
+  winner: Winner;
   playerCount: number;
   rounds: number;
   secretWordCivilian: string;

@@ -1,4 +1,4 @@
-import { Role, Player, GameConfig } from "./types";
+import { Role, Winner, Player, GameConfig } from "./types";
 import { WordPair, WORD_PAIRS } from "@/data/wordBank";
 import { AVATAR_OPTIONS } from "@/components/CartoonAvatar";
 
@@ -207,17 +207,27 @@ export function pickRandomFirstSpeakerIndex(players: Player[]): number {
 
 export interface WinConditionResult {
   isGameOver: boolean;
-  winner?: Role;
+  winner?: Winner;
   reason?: string;
 }
 
+/**
+ * Official Undercover Win Conditions:
+ * 1. All Undercovers & Mr. White eliminated -> Civilian wins.
+ * 2. Only 1 (or 0) Civilian remains -> Surviving infiltrators win immediately:
+ *    - Both Undercover & Mr. White alive -> Joint win ("Penyusup": Undercover & Mr. White)
+ *    - Only Undercover alive -> Undercover wins
+ *    - Only Mr. White alive -> Mr. White wins automatically without needing to guess
+ * 3. While >= 2 Civilians remain (even e.g. 2 Civilian vs 2 Undercover), the game continues
+ *    because Undercovers do not know each other's identities.
+ */
 export function evaluateWinConditions(players: Player[]): WinConditionResult {
   const activePlayers = players.filter((p) => !p.isEliminated);
   const activeCivilians = activePlayers.filter((p) => p.role === "Civilian").length;
   const activeUndercover = activePlayers.filter((p) => p.role === "Undercover").length;
   const activeMrWhite = activePlayers.filter((p) => p.role === "Mr. White").length;
 
-  // Condition 1: All Undercovers and Mr. White eliminated -> Civilian wins
+  // 1. All infiltrators eliminated -> Civilian wins
   if (activeUndercover === 0 && activeMrWhite === 0) {
     return {
       isGameOver: true,
@@ -226,22 +236,31 @@ export function evaluateWinConditions(players: Player[]): WinConditionResult {
     };
   }
 
-  // Condition 2: Undercover >= Civilians + Mr. White (with at least 1 Undercover alive) -> Undercover wins
-  if (activeUndercover > 0 && activeUndercover >= activeCivilians + activeMrWhite) {
-    return {
-      isGameOver: true,
-      winner: "Undercover",
-      reason: "Jumlah Undercover kini seimbang dengan warga sipil. Undercover mengambil alih permainan!",
-    };
-  }
+  // 2. Only 1 (or 0) Civilian left -> Surviving infiltrators dominate and win
+  if (activeCivilians <= 1) {
+    if (activeUndercover > 0 && activeMrWhite > 0) {
+      return {
+        isGameOver: true,
+        winner: "Penyusup",
+        reason: "Civilian hanya tersisa 1! Undercover dan Mr. White berhasil mendominasi dan menang bersama!",
+      };
+    }
 
-  // Condition 3: Edge case where all Civilians and Undercovers are eliminated, only Mr. White survives
-  if (activeCivilians === 0 && activeUndercover === 0 && activeMrWhite > 0) {
-    return {
-      isGameOver: true,
-      winner: "Mr. White",
-      reason: "Seluruh Civilian telah tereliminasi! Mr. White bertahan hingga akhir dan memenangkan permainan!",
-    };
+    if (activeUndercover > 0) {
+      return {
+        isGameOver: true,
+        winner: "Undercover",
+        reason: "Civilian hanya tersisa 1! Undercover berhasil bertahan dan mendominasi permainan!",
+      };
+    }
+
+    if (activeMrWhite > 0) {
+      return {
+        isGameOver: true,
+        winner: "Mr. White",
+        reason: "Civilian hanya tersisa 1! Mr. White berhasil lolos hingga akhir dan menang otomatis!",
+      };
+    }
   }
 
   return { isGameOver: false };
