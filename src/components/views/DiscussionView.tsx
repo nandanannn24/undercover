@@ -4,7 +4,16 @@ import { useState, useEffect } from "react";
 import { useGameStore } from "@/lib/store/gameStore";
 import { sound } from "@/lib/audio";
 import { CartoonAvatar } from "@/components/CartoonAvatar";
-import { UserCheck, Play, Pause, Vote, Clock, RotateCcw, Sparkles, AlertCircle } from "lucide-react";
+import {
+  Play,
+  Pause,
+  Vote,
+  Clock,
+  RotateCcw,
+  Check,
+  ChevronRight,
+  Mic,
+} from "lucide-react";
 
 export function DiscussionView() {
   const {
@@ -12,36 +21,49 @@ export function DiscussionView() {
     currentRound,
     currentSpeakerIndex,
     nextSpeaker,
-    setStage,
+    castVote,
     config,
   } = useGameStore();
 
   const activePlayers = players.filter((p) => !p.isEliminated);
-  const currentSpeaker = activePlayers[currentSpeakerIndex] || activePlayers[0];
+  const eliminatedPlayers = players.filter((p) => p.isEliminated);
+  const safeSpeakerIdx =
+    activePlayers.length > 0 ? currentSpeakerIndex % activePlayers.length : 0;
+  const currentSpeaker = activePlayers[safeSpeakerIdx] || activePlayers[0];
 
-  // Optional Discussion Timer
-  const [secondsLeft, setSecondsLeft] = useState<number>(config.discussionTimerSeconds || 60);
+  const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(null);
+  const [secondsLeft, setSecondsLeft] = useState<number>(
+    config.discussionTimerSeconds || 60
+  );
   const [isTimerRunning, setIsTimerRunning] = useState<boolean>(false);
 
+  // Reset selected vote when round changes
   useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isTimerRunning && secondsLeft > 0) {
-      interval = setInterval(() => {
-        setSecondsLeft((prev) => {
-          if (prev <= 1) {
-            sound.playTimerTick(true);
-            setIsTimerRunning(false);
-            return 0;
-          }
-          if (prev <= 10) {
-            sound.playTimerTick(true);
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    }
-    return () => clearInterval(interval);
+    setSelectedPlayerId(null);
+    setIsTimerRunning(false);
+    setSecondsLeft(config.discussionTimerSeconds || 60);
+  }, [currentRound, config.discussionTimerSeconds]);
+
+  useEffect(() => {
+    if (!isTimerRunning || secondsLeft <= 0) return;
+
+    const timer = setTimeout(() => {
+      if (secondsLeft <= 1) {
+        sound.playTimerTick(true);
+        setIsTimerRunning(false);
+        setSecondsLeft(0);
+      } else {
+        if (secondsLeft <= 10) {
+          sound.playTimerTick(true);
+        }
+        setSecondsLeft((prev) => prev - 1);
+      }
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, [isTimerRunning, secondsLeft]);
+
+  const selectedPlayer = activePlayers.find((p) => p.id === selectedPlayerId);
 
   const handleNextSpeaker = () => {
     sound.playClick();
@@ -49,176 +71,217 @@ export function DiscussionView() {
     setSecondsLeft(config.discussionTimerSeconds || 60);
   };
 
-  const handleStartVoting = () => {
+  const handleSelectCandidate = (id: string) => {
     sound.playClick();
-    setStage("VOTING");
+    setSelectedPlayerId((prev) => (prev === id ? null : id));
+  };
+
+  const handleSubmitVote = () => {
+    if (!selectedPlayerId) return;
+    sound.playClick();
+    castVote(selectedPlayerId);
+  };
+
+  const getSeatNumber = (playerId: string) => {
+    return players.findIndex((p) => p.id === playerId) + 1;
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-3 sm:py-6 z-10">
-      {/* Round & Timer Cockpit Top Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-4 sm:mb-5">
-        <div className="flex items-center gap-2.5">
-          <span className="font-mono text-xs font-bold tracking-wider px-3.5 py-1 rounded-full bg-purple-950/80 border border-amber-500/40 text-amber-300 shadow-sm">
+    <div className="w-full max-w-2xl mx-auto px-3 sm:px-4 py-2 z-10 flex flex-col gap-3">
+      {/* 1. Compact Round & Timer Top Bar */}
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <span className="font-mono text-[11px] font-bold tracking-wider px-3 py-1 rounded-full bg-purple-950/85 border border-amber-500/40 text-amber-300 shadow-sm">
             RONDE {currentRound}
           </span>
-          <span className="text-xs text-slate-300 font-medium">
-            {activePlayers.length} dari {players.length} Pemain Aktif
+          <span className="text-xs text-slate-300 font-semibold">
+            {activePlayers.length}/{players.length} Aktif
           </span>
         </div>
 
-        {/* Discussion Timer Widget */}
         {config.discussionTimerSeconds > 0 && (
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 border border-purple-500/30 backdrop-blur-md shadow-sm">
-            <Clock className="w-4 h-4 text-amber-400" />
-            <span className={`text-sm font-mono font-bold ${secondsLeft <= 10 ? "text-rose-400 animate-pulse" : "text-amber-300"}`}>
-              {Math.floor(secondsLeft / 60)}:{(secondsLeft % 60).toString().padStart(2, "0")}
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/50 border border-purple-500/30">
+            <Clock className="w-3.5 h-3.5 text-amber-400" />
+            <span
+              className={`text-xs font-mono font-bold ${
+                secondsLeft <= 10 ? "text-rose-400 animate-pulse" : "text-amber-300"
+              }`}
+            >
+              {Math.floor(secondsLeft / 60)}:
+              {(secondsLeft % 60).toString().padStart(2, "0")}
             </span>
-            <div className="flex items-center gap-1 ml-1 border-l border-white/10 pl-2">
-              <button
-                type="button"
-                onClick={() => {
-                  sound.playClick();
-                  setIsTimerRunning(!isTimerRunning);
-                }}
-                className="text-slate-300 hover:text-white transition p-1 cursor-pointer"
-                title={isTimerRunning ? "Pause Timer" : "Mulai Timer"}
-              >
-                {isTimerRunning ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  sound.playClick();
-                  setIsTimerRunning(false);
-                  setSecondsLeft(config.discussionTimerSeconds || 60);
-                }}
-                className="text-slate-400 hover:text-white transition p-1 cursor-pointer"
-                title="Reset Timer"
-              >
-                <RotateCcw className="w-3.5 h-3.5" />
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* 3D Bento Cockpit: Speaker Spotlight & Player Status */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5">
-        
-        {/* Left Bento: Current Speaker Spotlight (Span 5 cols on Desktop) */}
-        {currentSpeaker && (
-          <div className="md:col-span-5 bento-card-raised p-6 flex flex-col items-center justify-between text-center relative overflow-hidden">
-            <div className="w-full">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-[10px] font-mono font-bold tracking-widest uppercase mb-4">
-                <Sparkles className="w-3 h-3 text-amber-400" />
-                <span>GILIRAN BICARA</span>
-              </div>
-
-              {/* 3D Speaker Avatar */}
-              <div className="flex justify-center mb-3 drop-shadow-[0_12px_24px_rgba(212,175,55,0.3)]">
-                <CartoonAvatar id={currentSpeaker.avatar} size="lg" />
-              </div>
-
-              <h3 className="font-cinzel text-2xl sm:text-3xl font-black text-amber-100 tracking-wide mb-1.5">
-                {currentSpeaker.name}
-              </h3>
-
-              <p className="text-xs text-slate-300 font-medium leading-relaxed max-w-xs mx-auto mt-2">
-                Sebutkan 1 kata atau frasa pendek yang mendeskripsikan kata rahasiamu tanpa membuatnya terlalu gamblang!
-              </p>
-            </div>
-
             <button
               type="button"
-              onClick={handleNextSpeaker}
-              className="w-full mt-5 py-3 px-4 rounded-xl btn-secondary-3d text-xs font-bold text-amber-200 flex items-center justify-center gap-2 cursor-pointer shadow-md active:translate-y-1"
+              onClick={() => {
+                sound.playClick();
+                setIsTimerRunning((r) => !r);
+              }}
+              className="text-slate-300 hover:text-white p-1 cursor-pointer"
+              title={isTimerRunning ? "Pause Timer" : "Mulai Timer"}
+              aria-label={isTimerRunning ? "Pause Timer" : "Mulai Timer"}
             >
-              <UserCheck className="w-4 h-4 text-amber-400" />
-              <span>Selesai Bicara • Giliran Selanjutnya</span>
+              {isTimerRunning ? (
+                <Pause className="w-3.5 h-3.5" />
+              ) : (
+                <Play className="w-3.5 h-3.5" />
+              )}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                sound.playClick();
+                setIsTimerRunning(false);
+                setSecondsLeft(config.discussionTimerSeconds || 60);
+              }}
+              className="text-slate-400 hover:text-white p-1 cursor-pointer"
+              title="Reset Timer"
+              aria-label="Reset Timer"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
             </button>
           </div>
         )}
-
-        {/* Right Bento: All Players Status Cockpit (Span 7 cols on Desktop) */}
-        <div className="md:col-span-7 bento-card p-5 flex flex-col justify-between">
-          <div>
-            <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
-              <h4 className="font-cinzel text-sm sm:text-base font-bold text-amber-200">
-                Radar Status Seluruh Pemain
-              </h4>
-              <span className="text-[10px] font-mono text-slate-400">
-                Urutan Berputar
-              </span>
-            </div>
-
-            {/* Players Status Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[44vh] overflow-y-auto pr-1">
-              {players.map((p, idx) => {
-                const isCurrent = currentSpeaker && p.id === currentSpeaker.id;
-                return (
-                  <div
-                    key={idx}
-                    className={`p-3 rounded-2xl border flex items-center gap-3 transition-all ${
-                      p.isEliminated
-                        ? "opacity-65 bg-black/30 border-white/10"
-                        : isCurrent
-                        ? "bg-amber-500/15 border-amber-400 shadow-[0_0_20px_rgba(212,175,55,0.3)] ring-1 ring-amber-400"
-                        : "glass-card-subtle border-purple-500/20 hover:border-purple-500/40"
-                    }`}
-                  >
-                    <div className={p.isEliminated ? "grayscale opacity-60" : ""}>
-                      <CartoonAvatar id={p.avatar} size="xs" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between gap-1">
-                        <span className={`text-xs font-bold truncate ${p.isEliminated ? "text-slate-400 line-through" : "text-slate-100"}`}>
-                          {p.name}
-                        </span>
-                        <span className="text-[10px] font-mono text-slate-400">
-                          #{idx + 1}
-                        </span>
-                      </div>
-                      {p.isEliminated ? (
-                        <span
-                          className={`inline-block mt-0.5 text-[10px] font-bold px-2 py-0.5 rounded-full border ${
-                            p.role === "Undercover"
-                              ? "bg-rose-950/70 text-rose-300 border-rose-500/40"
-                              : p.role === "Mr. White"
-                                ? "bg-purple-950/70 text-purple-300 border-purple-400/40"
-                                : "bg-sky-950/70 text-sky-300 border-sky-400/40"
-                          }`}
-                        >
-                          Gugur • {p.role}
-                        </span>
-                      ) : (
-                        <span className={`text-[10px] font-semibold ${isCurrent ? "text-amber-300" : "text-slate-400"}`}>
-                          {isCurrent ? "Sedang Bicara" : "Menyimak"}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="pt-3 border-t border-white/10 mt-3 text-[11px] text-slate-400">
-            Setelah semua pemain memberikan petunjuk, mulai voting eliminasi untuk mengeluarkan orang yang dicurigai.
-          </div>
-        </div>
-
       </div>
 
-      {/* Action Footer: Prominent Elimination Voting Button */}
-      <div className="pt-2">
+      {/* 2. Compact Turn Speaker Banner (1 Row, Zero Bloat) */}
+      {currentSpeaker && (
+        <div className="bento-card-raised px-3.5 py-3 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <CartoonAvatar id={currentSpeaker.avatar} size="sm" />
+            <div className="min-w-0">
+              <div className="flex items-center gap-1.5 text-[10px] font-mono font-bold uppercase tracking-wider text-amber-400">
+                <Mic className="w-3 h-3 shrink-0" />
+                <span>Giliran Bicara #{getSeatNumber(currentSpeaker.id)}</span>
+              </div>
+              <h3 className="font-cinzel text-lg sm:text-xl font-black text-amber-100 truncate leading-tight">
+                {currentSpeaker.name}
+              </h3>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={handleNextSpeaker}
+            className="btn-secondary-3d min-h-[44px] px-3 sm:px-4 rounded-xl text-xs font-bold text-amber-200 flex items-center gap-1 shrink-0 cursor-pointer active:translate-y-0.5"
+          >
+            <span>Lanjut</span>
+            <ChevronRight className="w-4 h-4 text-amber-400" />
+          </button>
+        </div>
+      )}
+
+      {/* 3. Instant Voting Section (Fits Entirely On One Screen — Zero Scroll!) */}
+      <div className="bento-card p-3.5 sm:p-4 flex flex-col gap-3">
+        <div className="flex items-center justify-between">
+          <div>
+            <h4 className="font-cinzel text-sm sm:text-base font-black text-amber-200 tracking-wide">
+              Voting Eliminasi
+            </h4>
+            <p className="text-[11px] text-slate-400">
+              Ketuk nama pemain yang dicurigai, lalu tekan tombol eliminasi
+            </p>
+          </div>
+          {selectedPlayer && (
+            <span className="text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-rose-950/80 border border-rose-500/50 text-rose-300 shrink-0">
+              Target: {selectedPlayer.name}
+            </span>
+          )}
+        </div>
+
+        {/* Compact 2-Column Mobile / 3-Column Desktop Candidate Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {activePlayers.map((p) => {
+            const isSelected = selectedPlayerId === p.id;
+            const isSpeaking = currentSpeaker && p.id === currentSpeaker.id;
+            const seatNum = getSeatNumber(p.id);
+
+            return (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => handleSelectCandidate(p.id)}
+                className={`min-h-[54px] px-2.5 py-2 rounded-2xl border text-left transition-all flex items-center justify-between gap-2 cursor-pointer active:scale-[0.97] ${
+                  isSelected
+                    ? "bg-rose-950/75 border-rose-400 shadow-[0_0_20px_rgba(244,63,94,0.35)] ring-2 ring-rose-500"
+                    : isSpeaking
+                      ? "bg-amber-500/12 border-amber-400/60 hover:border-amber-300"
+                      : "glass-panel border-purple-500/25 hover:border-amber-400/40"
+                }`}
+              >
+                <div className="flex items-center gap-2 min-w-0">
+                  <CartoonAvatar id={p.avatar} size="xs" />
+                  <div className="min-w-0">
+                    <span className="block text-xs sm:text-sm font-bold text-slate-100 truncate leading-tight">
+                      {p.name}
+                    </span>
+                    <span
+                      className={`block text-[10px] font-mono leading-tight ${
+                        isSelected
+                          ? "text-rose-300 font-bold"
+                          : isSpeaking
+                            ? "text-amber-300"
+                            : "text-slate-400"
+                      }`}
+                    >
+                      {isSelected
+                        ? "Dipilih"
+                        : isSpeaking
+                          ? `#${seatNum} • Bicara`
+                          : `#${seatNum}`}
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 transition ${
+                    isSelected
+                      ? "border-rose-300 bg-rose-500 text-white"
+                      : "border-slate-600 bg-black/40"
+                  }`}
+                >
+                  {isSelected && <Check className="w-3 h-3 text-white stroke-[3]" />}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Eliminated Players Compact Chips (Revealed Roles) */}
+        {eliminatedPlayers.length > 0 && (
+          <div className="pt-2 border-t border-white/10 flex flex-wrap items-center gap-1.5">
+            <span className="text-[10px] font-mono uppercase text-slate-400 mr-1">
+              Gugur:
+            </span>
+            {eliminatedPlayers.map((p) => (
+              <span
+                key={p.id}
+                className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+                  p.role === "Undercover"
+                    ? "bg-rose-950/60 text-rose-300 border-rose-500/40"
+                    : p.role === "Mr. White"
+                      ? "bg-purple-950/60 text-purple-300 border-purple-400/40"
+                      : "bg-sky-950/60 text-sky-300 border-sky-400/40"
+                }`}
+              >
+                {p.name} • {p.role}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Direct Action Button Right Below Grid (Zero Scroll Needed!) */}
         <button
           type="button"
-          onClick={handleStartVoting}
-          className="btn-chunky-rose w-full py-4 px-5 font-cinzel text-xs sm:text-sm font-black tracking-wider uppercase flex items-center justify-center gap-2 shadow-2xl cursor-pointer"
+          onClick={handleSubmitVote}
+          disabled={!selectedPlayerId}
+          className="btn-chunky-rose w-full min-h-[50px] py-3 px-4 rounded-xl font-cinzel text-xs sm:text-sm font-black tracking-wider uppercase disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-xl cursor-pointer active:translate-y-0.5"
         >
-          <Vote className="w-5 h-5" />
-          <span>Mulai Voting Eliminasi Sekarang!</span>
+          <Vote className="w-4 h-4 shrink-0" />
+          <span className="truncate">
+            {selectedPlayer
+              ? `Eliminasi ${selectedPlayer.name}`
+              : "Pilih Pemain untuk Eliminasi"}
+          </span>
         </button>
       </div>
     </div>

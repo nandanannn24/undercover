@@ -194,22 +194,15 @@ export function distributeRolesAndWords(
 }
 
 /**
- * Pick a random starting speaker index among active players where Mr. White is NEVER first.
- * Undercover and Civilian are both equally eligible to speak first.
+ * Pick the first active speaker index following the seating order (#1 -> #2 -> ... -> #N)
+ * where Mr. White is NEVER forced to speak first. Undercover and Civilian are both free to go first.
  */
 export function pickRandomFirstSpeakerIndex(players: Player[]): number {
   const activePlayers = players.filter((p) => !p.isEliminated);
   if (activePlayers.length <= 1) return 0;
 
-  const eligibleIndices: number[] = [];
-  for (let i = 0; i < activePlayers.length; i++) {
-    if (activePlayers[i].role !== "Mr. White") {
-      eligibleIndices.push(i);
-    }
-  }
-
-  if (eligibleIndices.length === 0) return 0;
-  return eligibleIndices[getRandomInt(0, eligibleIndices.length - 1)];
+  const firstNonMrWhite = activePlayers.findIndex((p) => p.role !== "Mr. White");
+  return firstNonMrWhite >= 0 ? firstNonMrWhite : 0;
 }
 
 export interface WinConditionResult {
@@ -224,7 +217,7 @@ export function evaluateWinConditions(players: Player[]): WinConditionResult {
   const activeUndercover = activePlayers.filter((p) => p.role === "Undercover").length;
   const activeMrWhite = activePlayers.filter((p) => p.role === "Mr. White").length;
 
-  // Condition 1: All Undercovers and Mr. White eliminated
+  // Condition 1: All Undercovers and Mr. White eliminated -> Civilian wins
   if (activeUndercover === 0 && activeMrWhite === 0) {
     return {
       isGameOver: true,
@@ -233,12 +226,21 @@ export function evaluateWinConditions(players: Player[]): WinConditionResult {
     };
   }
 
-  // Condition 2: Undercover >= Civilians + Mr. White
-  if (activeUndercover >= activeCivilians + activeMrWhite) {
+  // Condition 2: Undercover >= Civilians + Mr. White (with at least 1 Undercover alive) -> Undercover wins
+  if (activeUndercover > 0 && activeUndercover >= activeCivilians + activeMrWhite) {
     return {
       isGameOver: true,
       winner: "Undercover",
       reason: "Jumlah Undercover kini seimbang dengan warga sipil. Undercover mengambil alih permainan!",
+    };
+  }
+
+  // Condition 3: Edge case where all Civilians and Undercovers are eliminated, only Mr. White survives
+  if (activeCivilians === 0 && activeUndercover === 0 && activeMrWhite > 0) {
+    return {
+      isGameOver: true,
+      winner: "Mr. White",
+      reason: "Seluruh Civilian telah tereliminasi! Mr. White bertahan hingga akhir dan memenangkan permainan!",
     };
   }
 

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useGameStore } from "@/lib/store/gameStore";
 import { sound } from "@/lib/audio";
+import { shuffle } from "@/lib/game/engine";
 import { AVATAR_OPTIONS, CartoonAvatar } from "@/components/CartoonAvatar";
 import { ArrowLeft, ArrowRight, Dices, AlertCircle, Sparkles, UserCheck } from "lucide-react";
 
@@ -19,7 +20,7 @@ export function PlayerInputView() {
 
   const handleRandomizeNames = () => {
     sound.playClick();
-    const shuffled = [...COOL_NICKNAMES].sort(() => Math.random() - 0.5);
+    const shuffled = shuffle(COOL_NICKNAMES);
     const updated = playerInputs.map((p, idx) => ({
       ...p,
       name: shuffled[idx] || `Pemain ${idx + 1}`,

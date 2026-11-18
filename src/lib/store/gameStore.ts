@@ -77,6 +77,15 @@ export const useGameStore = create<GameStore>()(
       updateConfig: (patch) => {
         const current = get().config;
         const updated = { ...current, ...patch };
+
+        // Auto-clamp special roles so at least 2 Civilians always remain when playerCount shrinks
+        const maxSpecial = Math.max(1, updated.playerCount - 2);
+        if (updated.undercoverCount + updated.mrWhiteCount > maxSpecial) {
+          const reducedMrWhite = Math.min(updated.mrWhiteCount, Math.max(0, maxSpecial - 1));
+          updated.mrWhiteCount = reducedMrWhite;
+          updated.undercoverCount = Math.max(1, Math.min(updated.undercoverCount, maxSpecial - reducedMrWhite));
+        }
+
         set({ config: updated });
 
         if (patch.playerCount && patch.playerCount !== current.playerCount) {
