@@ -9,6 +9,7 @@ import {
   shuffle,
   selectWordPair,
   distributeRolesAndWords,
+  randomizeGameplayOrder,
   pickRandomFirstSpeakerIndex,
   evaluateWinConditions,
   checkMrWhiteGuess,
@@ -201,7 +202,10 @@ export const useGameStore = create<GameStore>()(
             isCardFlipped: false,
           });
         } else {
+          // Acak ulang urutan gameplay saat masuk Ronde 1 (Mr. White dijamin tidak di #1, Undercover bebas!)
+          const shuffledGameplayPlayers = randomizeGameplayOrder(players);
           set({
+            players: shuffledGameplayPlayers,
             stage: "DISCUSSION",
             isCardFlipped: false,
             currentSpeakerIndex: 0,

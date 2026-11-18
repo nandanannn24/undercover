@@ -13,6 +13,7 @@ import {
   Check,
   ChevronRight,
   Mic,
+  Shuffle,
 } from "lucide-react";
 
 export function DiscussionView() {
@@ -90,13 +91,19 @@ export function DiscussionView() {
     <div className="w-full max-w-2xl mx-auto px-3 sm:px-4 py-2 z-10 flex flex-col gap-3">
       {/* 1. Compact Round & Timer Top Bar */}
       <div className="flex items-center justify-between gap-2">
-        <div className="flex items-center gap-2">
-          <span className="font-mono text-[11px] font-bold tracking-wider px-3 py-1 rounded-full bg-purple-950/85 border border-amber-500/40 text-amber-300 shadow-sm">
+        <div className="flex items-center gap-1.5 flex-wrap">
+          <span className="font-mono text-[11px] font-bold tracking-wider px-2.5 py-1 rounded-full bg-purple-950/85 border border-amber-500/40 text-amber-300 shadow-sm">
             RONDE {currentRound}
           </span>
           <span className="text-xs text-slate-300 font-semibold">
             {activePlayers.length}/{players.length} Aktif
           </span>
+          {currentRound === 1 && (
+            <span className="inline-flex items-center gap-1 text-[10px] font-mono text-emerald-300 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full">
+              <Shuffle className="w-2.5 h-2.5" />
+              <span>Urutan Acak</span>
+            </span>
+          )}
         </div>
 
         {config.discussionTimerSeconds > 0 && (

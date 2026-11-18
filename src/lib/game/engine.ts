@@ -118,10 +118,10 @@ export function selectWordPair(
 }
 
 /**
- * Exact-uniform role & word distribution:
- * - Mr. White is strictly NEVER placed at index 0 (first turn), uniformly distributed across indices [1..N-1].
- * - Undercover is completely FREE to land on ANY index [0..N-1], including index 0 (first turn).
- * - Remaining slots are uniformly filled with Civilian & Undercover using unbiased crypto Fisher-Yates.
+ * Exact-uniform role & word distribution across ALL players [0..N-1].
+ * Every player (including #1 during card reveal) has an equal chance of getting any role.
+ * When transitioning from REVEAL to DISCUSSION, `randomizeGameplayOrder()` reshuffles
+ * the turn order and guarantees Mr. White is NEVER first speaker (Undercover is free).
  */
 export function distributeRolesAndWords(
   playerNames: { name: string; avatar: string; color: string }[],
@@ -129,46 +129,19 @@ export function distributeRolesAndWords(
   wordPair: WordPair
 ): Player[] {
   const n = playerNames.length;
-  const assignedRoles: Role[] = new Array<Role>(n).fill("Civilian");
+  const roles: Role[] = [];
 
-  // 1. Place Mr. White strictly in indices [1 .. n-1] (NEVER index 0)
-  const mrWhiteCount = Math.min(config.mrWhiteCount, Math.max(0, n - 1));
-  const nonFirstIndices: number[] = [];
-  for (let i = 1; i < n; i++) {
-    nonFirstIndices.push(i);
-  }
-  const mrWhiteSlots = new Set<number>(shuffle(nonFirstIndices).slice(0, mrWhiteCount));
-  for (const slot of mrWhiteSlots) {
-    assignedRoles[slot] = "Mr. White";
-  }
+  const mrWhiteCount = Math.min(config.mrWhiteCount, Math.max(0, n - 2));
+  const undercoverCount = Math.min(config.undercoverCount, Math.max(1, n - mrWhiteCount - 1));
 
-  // 2. Collect all remaining slots (INCLUDING index 0!) for Undercover + Civilian
-  const remainingSlots: number[] = [];
-  for (let i = 0; i < n; i++) {
-    if (!mrWhiteSlots.has(i)) {
-      remainingSlots.push(i);
-    }
-  }
+  for (let i = 0; i < mrWhiteCount; i++) roles.push("Mr. White");
+  for (let i = 0; i < undercoverCount; i++) roles.push("Undercover");
+  while (roles.length < n) roles.push("Civilian");
 
-  // 3. Shuffle both remaining slots and remaining roles (Undercover is completely free to be index 0!)
-  const shuffledSlots = shuffle(remainingSlots);
-  const undercoverCount = Math.min(config.undercoverCount, shuffledSlots.length);
-  const remainingRoles: Role[] = [];
-  for (let i = 0; i < undercoverCount; i++) {
-    remainingRoles.push("Undercover");
-  }
-  while (remainingRoles.length < shuffledSlots.length) {
-    remainingRoles.push("Civilian");
-  }
-  const shuffledRemainingRoles = shuffle(remainingRoles);
+  const shuffledRoles = shuffle(roles);
 
-  for (let i = 0; i < shuffledSlots.length; i++) {
-    assignedRoles[shuffledSlots[i]] = shuffledRemainingRoles[i];
-  }
-
-  // 4. Map to Player objects preserving exact seating order and names
   const players: Player[] = playerNames.map((p, index) => {
-    const role = assignedRoles[index];
+    const role = shuffledRoles[index];
     let clue = "";
     if (role === "Civilian") {
       clue = wordPair.civilian;
@@ -191,6 +164,41 @@ export function distributeRolesAndWords(
   });
 
   return players;
+}
+
+/**
+ * Randomize the gameplay turn order AFTER all players have finished viewing their cards.
+ * - Shuffles player order completely using unbiased crypto Fisher-Yates (re-shuffles once if identical to reveal order for N >= 3).
+ * - Hard Guarantee: index 0 (first speaker) is NEVER Mr. White, while Undercover is completely free to be index 0.
+ */
+export function randomizeGameplayOrder(players: Player[]): Player[] {
+  if (players.length <= 1) return [...players];
+
+  const originalIds = players.map((p) => p.id).join(",");
+  let ordered = shuffle(players);
+
+  // Avoid returning the exact same reveal order when there are >= 3 players
+  if (players.length >= 3 && ordered.map((p) => p.id).join(",") === originalIds) {
+    ordered = shuffle(ordered);
+  }
+
+  // Hard Guarantee: Mr. White is NEVER first in gameplay order (index 0); Undercover is free
+  if (ordered[0].role === "Mr. White") {
+    const eligibleIndices: number[] = [];
+    for (let i = 1; i < ordered.length; i++) {
+      if (ordered[i].role !== "Mr. White") {
+        eligibleIndices.push(i);
+      }
+    }
+    if (eligibleIndices.length > 0) {
+      const swapIdx = eligibleIndices[getRandomInt(0, eligibleIndices.length - 1)];
+      const temp = ordered[0];
+      ordered[0] = ordered[swapIdx];
+      ordered[swapIdx] = temp;
+    }
+  }
+
+  return ordered;
 }
 
 /**

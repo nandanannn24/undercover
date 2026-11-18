@@ -31,11 +31,11 @@ export function ConfirmationView() {
         <span className="font-mono text-[10px] font-bold tracking-widest text-amber-300 uppercase px-3 py-1 rounded-full bg-purple-950/80 border border-amber-500/30">
           LANGKAH 3 DARI 4
         </span>
-        <h2 className="font-cinzel text-2xl sm:text-3xl font-black text-amber-100 tracking-wide mt-2">
-          Urutan Giliran Bicara
+        <h2 className="font-cinzel text-xl sm:text-3xl font-black text-amber-100 tracking-wide mt-2">
+          Urutan Buka Kartu
         </h2>
         <p className="text-xs text-slate-300 mt-1">
-          Pemain akan memberikan petunjuk sesuai urutan nomor di bawah ini
+          Oper HP sesuai urutan di bawah. Setelah semua membuka kartu, urutan bicara gameplay akan diacak otomatis!
         </p>
       </div>
 

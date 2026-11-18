@@ -19,8 +19,8 @@ export function GameHeader() {
 
   return (
     <>
-      <header className="w-full max-w-xl mx-auto flex items-center justify-between px-4 py-3 z-20">
-        <div className="flex items-center gap-2">
+      <header className="w-full max-w-5xl mx-auto flex items-center justify-between px-3.5 sm:px-4 py-2.5 sm:py-3 z-20">
+        <div className="flex items-center gap-2 min-w-0">
           {stage !== "LOBBY" ? (
             <button
               onClick={() => {
@@ -28,8 +28,9 @@ export function GameHeader() {
                   resetGame();
                 }
               }}
-              className="p-2.5 rounded-xl btn-secondary-3d text-amber-300 transition active:scale-95"
+              className="w-10 h-10 rounded-xl btn-secondary-3d text-amber-300 transition active:scale-95 flex items-center justify-center shrink-0 cursor-pointer"
               title="Menu Utama"
+              aria-label="Menu Utama"
             >
               <Home className="w-4 h-4 stroke-[2]" />
             </button>
@@ -37,34 +38,36 @@ export function GameHeader() {
 
           <Link
             href="/"
-            className="flex items-center gap-2 focus:outline-none group"
+            className="flex items-center gap-2 focus:outline-none group min-w-0"
             onClick={() => sound.playClick()}
           >
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 shadow-md border border-amber-300/50 group-hover:scale-105 transition-transform">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 shadow-md border border-amber-300/50 group-hover:scale-105 transition-transform shrink-0">
               <Shield className="w-4 h-4 stroke-[2.5]" />
             </div>
-            <span className="font-cinzel text-xl sm:text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-500 drop-shadow-[0_2px_8px_rgba(212,175,55,0.3)]">
+            <span className="font-cinzel text-lg sm:text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-500 drop-shadow-[0_2px_8px_rgba(212,175,55,0.3)] truncate">
               UNDERCOVER
             </span>
           </Link>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           <button
             onClick={() => {
               setShowHowToPlay(true);
               sound.playClick();
             }}
-            className="p-2.5 rounded-xl btn-secondary-3d text-amber-300 transition active:scale-95"
+            className="w-10 h-10 rounded-xl btn-secondary-3d text-amber-300 transition active:scale-95 flex items-center justify-center cursor-pointer"
             title="Cara Bermain"
+            aria-label="Cara Bermain"
           >
             <HelpCircle className="w-4 h-4 stroke-[2]" />
           </button>
 
           <Link
             href="/words"
-            className="p-2.5 rounded-xl btn-secondary-3d text-amber-300 transition active:scale-95"
+            className="w-10 h-10 rounded-xl btn-secondary-3d text-amber-300 transition active:scale-95 flex items-center justify-center"
             title="Bank Kata Bersih"
+            aria-label="Bank Kata Bersih"
             onClick={() => sound.playClick()}
           >
             <BookOpen className="w-4 h-4 stroke-[2]" />
@@ -72,12 +75,13 @@ export function GameHeader() {
 
           <button
             onClick={handleMuteToggle}
-            className={`p-2.5 rounded-xl transition active:scale-95 ${
+            className={`w-10 h-10 rounded-xl transition active:scale-95 flex items-center justify-center cursor-pointer ${
               isMuted
                 ? "bg-rose-950/80 border border-rose-500/40 text-rose-400 shadow-sm"
                 : "btn-secondary-3d text-amber-300"
             }`}
             title={isMuted ? "Nyalakan Suara" : "Bisukan Suara"}
+            aria-label={isMuted ? "Nyalakan Suara" : "Bisukan Suara"}
           >
             {isMuted ? (
               <VolumeX className="w-4 h-4 stroke-[2]" />

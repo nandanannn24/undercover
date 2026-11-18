@@ -1684,7 +1684,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Udang",
     "undercover": "Cumi",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0242",
@@ -1698,7 +1698,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Tupai",
     "undercover": "Hamster",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0244",
@@ -1712,7 +1712,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Kelelawar",
     "undercover": "Burung",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0246",
@@ -1726,7 +1726,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Kudanil",
     "undercover": "Badak",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0248",
@@ -1740,7 +1740,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Koi",
     "undercover": "Arwana",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0250",
@@ -1754,7 +1754,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Gurame",
     "undercover": "Nila",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0252",
@@ -1768,7 +1768,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Kuda Laut",
     "undercover": "Bintang Laut",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0254",
@@ -1782,7 +1782,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Kumbang",
     "undercover": "Kepik",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0256",
@@ -1796,7 +1796,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Jangkrik",
     "undercover": "Kecoa",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0258",
@@ -1810,7 +1810,7 @@
     "category": "Hewan & Binatang",
     "civilian": "Merak",
     "undercover": "Cendrawasih",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0260",
@@ -1824,231 +1824,231 @@
     "category": "Hewan & Binatang",
     "civilian": "Flamingo",
     "undercover": "Bangau",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0262",
     "category": "Alam & Geografi",
     "civilian": "Sungai",
     "undercover": "Danau",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0263",
     "category": "Alam & Geografi",
     "civilian": "Pantai",
     "undercover": "Pulau",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0264",
     "category": "Alam & Geografi",
     "civilian": "Lembah",
     "undercover": "Ngarai",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0265",
     "category": "Alam & Geografi",
     "civilian": "Gua",
     "undercover": "Jurang",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0266",
     "category": "Alam & Geografi",
     "civilian": "Air Terjun",
     "undercover": "Mata Air",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0267",
     "category": "Alam & Geografi",
     "civilian": "Awan",
     "undercover": "Kabut",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0268",
     "category": "Alam & Geografi",
     "civilian": "Hujan",
     "undercover": "Gerimis",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0269",
     "category": "Alam & Geografi",
     "civilian": "Salju",
     "undercover": "Es",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0270",
     "category": "Alam & Geografi",
     "civilian": "Petir",
     "undercover": "Guntur",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0271",
     "category": "Alam & Geografi",
     "civilian": "Pelangi",
     "undercover": "Aurora",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0272",
     "category": "Alam & Geografi",
     "civilian": "Bumi",
     "undercover": "Mars",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0273",
     "category": "Alam & Geografi",
     "civilian": "Bintang",
     "undercover": "Komet",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0274",
     "category": "Alam & Geografi",
     "civilian": "Pasir",
     "undercover": "Tanah",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0275",
     "category": "Alam & Geografi",
     "civilian": "Batu",
     "undercover": "Kerikil",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0276",
     "category": "Alam & Geografi",
     "civilian": "Ombak",
     "undercover": "Arus",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0277",
     "category": "Alam & Geografi",
     "civilian": "Lahar",
     "undercover": "Magma",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0278",
     "category": "Alam & Geografi",
     "civilian": "Badai",
     "undercover": "Topan",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0279",
     "category": "Alam & Geografi",
     "civilian": "Banjir",
     "undercover": "Tsunami",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0280",
     "category": "Alam & Geografi",
     "civilian": "Gempa",
     "undercover": "Longsor",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0281",
     "category": "Alam & Geografi",
     "civilian": "Pelangi",
     "undercover": "Cahaya",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0282",
     "category": "Alam & Geografi",
     "civilian": "Samudra",
     "undercover": "Laut",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0283",
     "category": "Alam & Geografi",
     "civilian": "Teluk",
     "undercover": "Selat",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0284",
     "category": "Alam & Geografi",
     "civilian": "Tanjung",
     "undercover": "Semenanjung",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0285",
     "category": "Alam & Geografi",
     "civilian": "Rawa",
     "undercover": "Waduk",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0286",
     "category": "Alam & Geografi",
     "civilian": "Kawah",
     "undercover": "Puncak",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0287",
     "category": "Alam & Geografi",
     "civilian": "Gurun",
     "undercover": "Padang Pasir",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0288",
     "category": "Alam & Geografi",
     "civilian": "Sabana",
     "undercover": "Padang Rumput",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0289",
     "category": "Alam & Geografi",
     "civilian": "Matahari Terbit",
     "undercover": "Matahari Terbenam",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0290",
     "category": "Alam & Geografi",
     "civilian": "Siang",
     "undercover": "Malam",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0291",
     "category": "Alam & Geografi",
     "civilian": "Musim Hujan",
     "undercover": "Musim Kemarau",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0292",
     "category": "Alam & Geografi",
     "civilian": "Embun",
     "undercover": "Uap",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0293",
     "category": "Alam & Geografi",
     "civilian": "Komet",
     "undercover": "Meteor",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0294",
@@ -2062,7 +2062,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Bus",
     "undercover": "Angkot",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0296",
@@ -2076,7 +2076,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "KRL",
     "undercover": "LRT",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0298",
@@ -2090,7 +2090,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Becak",
     "undercover": "Delman",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0300",
@@ -2104,7 +2104,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Speedboat",
     "undercover": "Perahu",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0302",
@@ -2118,7 +2118,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Jet",
     "undercover": "Pesawat",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0304",
@@ -2132,7 +2132,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Bemo",
     "undercover": "Angkot",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0306",
@@ -2146,7 +2146,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Ambulans",
     "undercover": "Mobil Polisi",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0308",
@@ -2160,7 +2160,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Stir",
     "undercover": "Roda",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0310",
@@ -2174,7 +2174,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Garasi",
     "undercover": "Parkir",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0312",
@@ -2188,7 +2188,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Bandara",
     "undercover": "Pelabuhan",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0314",
@@ -2202,7 +2202,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Motor Matic",
     "undercover": "Motor Bebek",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0316",
@@ -2216,7 +2216,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Sepeda Lipat",
     "undercover": "Sepeda Gunung",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0318",
@@ -2230,7 +2230,7 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Helikopter",
     "undercover": "Pesawat Capung",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0320",
@@ -2244,399 +2244,399 @@
     "category": "Kendaraan & Transportasi",
     "civilian": "Kereta Kencana",
     "undercover": "Delman",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0322",
     "category": "Teknologi & Gadget",
     "civilian": "Laptop",
     "undercover": "Komputer",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0323",
     "category": "Teknologi & Gadget",
     "civilian": "Keyboard",
     "undercover": "Mouse",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0324",
     "category": "Teknologi & Gadget",
     "civilian": "Speaker",
     "undercover": "Headphone",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0325",
     "category": "Teknologi & Gadget",
     "civilian": "Earphone",
     "undercover": "Headset",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0326",
     "category": "Teknologi & Gadget",
     "civilian": "Kamera",
     "undercover": "Webcam",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0327",
     "category": "Teknologi & Gadget",
     "civilian": "Flashdisk",
     "undercover": "Hardisk",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0328",
     "category": "Teknologi & Gadget",
     "civilian": "Charger",
     "undercover": "Powerbank",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0329",
     "category": "Teknologi & Gadget",
     "civilian": "WiFi",
     "undercover": "Bluetooth",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0330",
     "category": "Teknologi & Gadget",
     "civilian": "Router",
     "undercover": "Modem",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0331",
     "category": "Teknologi & Gadget",
     "civilian": "Printer",
     "undercover": "Scanner",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0332",
     "category": "Teknologi & Gadget",
     "civilian": "Proyektor",
     "undercover": "Monitor",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0333",
     "category": "Teknologi & Gadget",
     "civilian": "Android",
     "undercover": "iPhone",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0334",
     "category": "Teknologi & Gadget",
     "civilian": "Instagram",
     "undercover": "TikTok",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0335",
     "category": "Teknologi & Gadget",
     "civilian": "YouTube",
     "undercover": "Netflix",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0336",
     "category": "Teknologi & Gadget",
     "civilian": "WhatsApp",
     "undercover": "Telegram",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0337",
     "category": "Teknologi & Gadget",
     "civilian": "Google",
     "undercover": "Yahoo",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0338",
     "category": "Teknologi & Gadget",
     "civilian": "Password",
     "undercover": "PIN",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0339",
     "category": "Teknologi & Gadget",
     "civilian": "Layar",
     "undercover": "Kaca",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0340",
     "category": "Teknologi & Gadget",
     "civilian": "Kabel Data",
     "undercover": "Kabel Cas",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0341",
     "category": "Teknologi & Gadget",
     "civilian": "Game",
     "undercover": "Aplikasi",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0342",
     "category": "Teknologi & Gadget",
     "civilian": "Smart TV",
     "undercover": "Monitor",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0343",
     "category": "Teknologi & Gadget",
     "civilian": "PlayStation",
     "undercover": "Xbox",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0344",
     "category": "Teknologi & Gadget",
     "civilian": "Nintendo",
     "undercover": "Game Boy",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0345",
     "category": "Teknologi & Gadget",
     "civilian": "TWS",
     "undercover": "Earphone",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0346",
     "category": "Teknologi & Gadget",
     "civilian": "Smartwatch",
     "undercover": "Jam Tangan",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0347",
     "category": "Teknologi & Gadget",
     "civilian": "Tablet",
     "undercover": "iPad",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0348",
     "category": "Teknologi & Gadget",
     "civilian": "Drone",
     "undercover": "Helikopter Mainan",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0349",
     "category": "Teknologi & Gadget",
     "civilian": "Mic",
     "undercover": "Speaker",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0350",
     "category": "Teknologi & Gadget",
     "civilian": "Kamera Mirrorless",
     "undercover": "DSLR",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0351",
     "category": "Teknologi & Gadget",
     "civilian": "Tripod",
     "undercover": "Tongsis",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0352",
     "category": "Profesi & Tokoh",
     "civilian": "Dokter",
     "undercover": "Perawat",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0353",
     "category": "Profesi & Tokoh",
     "civilian": "Bidan",
     "undercover": "Perawat",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0354",
     "category": "Profesi & Tokoh",
     "civilian": "Apoteker",
     "undercover": "Dokter",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0355",
     "category": "Profesi & Tokoh",
     "civilian": "Guru",
     "undercover": "Dosen",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0356",
     "category": "Profesi & Tokoh",
     "civilian": "Polisi",
     "undercover": "Satpam",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0357",
     "category": "Profesi & Tokoh",
     "civilian": "Tentara",
     "undercover": "Polisi",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0358",
     "category": "Profesi & Tokoh",
     "civilian": "Hakim",
     "undercover": "Jaksa",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0359",
     "category": "Profesi & Tokoh",
     "civilian": "Pengacara",
     "undercover": "Notaris",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0360",
     "category": "Profesi & Tokoh",
     "civilian": "Pilot",
     "undercover": "Masinis",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0361",
     "category": "Profesi & Tokoh",
     "civilian": "Pramugari",
     "undercover": "Resepsionis",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0362",
     "category": "Profesi & Tokoh",
     "civilian": "Koki",
     "undercover": "Barista",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0363",
     "category": "Profesi & Tokoh",
     "civilian": "Pelayan",
     "undercover": "Kasir",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0364",
     "category": "Profesi & Tokoh",
     "civilian": "Arsitek",
     "undercover": "Mandor",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0365",
     "category": "Profesi & Tokoh",
     "civilian": "Petani",
     "undercover": "Nelayan",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0366",
     "category": "Profesi & Tokoh",
     "civilian": "Wartawan",
     "undercover": "Fotografer",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0367",
     "category": "Profesi & Tokoh",
     "civilian": "Pelukis",
     "undercover": "Desainer",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0368",
     "category": "Profesi & Tokoh",
     "civilian": "Penyanyi",
     "undercover": "Musisi",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0369",
     "category": "Profesi & Tokoh",
     "civilian": "Aktor",
     "undercover": "Model",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0370",
     "category": "Profesi & Tokoh",
     "civilian": "Penulis",
     "undercover": "Wartawan",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0371",
     "category": "Profesi & Tokoh",
     "civilian": "Tukang Kayu",
     "undercover": "Tukang Besi",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0372",
     "category": "Profesi & Tokoh",
     "civilian": "Tukang Parkir",
     "undercover": "Satpam",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0373",
     "category": "Profesi & Tokoh",
     "civilian": "Tukang Cukur",
     "undercover": "Salon",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0374",
     "category": "Profesi & Tokoh",
     "civilian": "Montir",
     "undercover": "Sopir",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0375",
     "category": "Profesi & Tokoh",
     "civilian": "Nahkoda",
     "undercover": "Masinis",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0376",
     "category": "Profesi & Tokoh",
     "civilian": "Penyelam",
     "undercover": "Perenang",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0377",
     "category": "Profesi & Tokoh",
     "civilian": "Petinju",
     "undercover": "Pegulat",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0378",
@@ -2650,7 +2650,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Daster",
     "undercover": "Piyama",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0380",
@@ -2664,7 +2664,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Rompi",
     "undercover": "Jaket",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0382",
@@ -2678,7 +2678,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Jilbab",
     "undercover": "Pashmina",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0384",
@@ -2692,7 +2692,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Dasi",
     "undercover": "Kupu-kupu",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0386",
@@ -2706,7 +2706,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Sepatu",
     "undercover": "Boots",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0388",
@@ -2720,7 +2720,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Sneakers",
     "undercover": "Pantofel",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0390",
@@ -2734,7 +2734,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Dompet",
     "undercover": "Pouch",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0392",
@@ -2748,7 +2748,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Anting",
     "undercover": "Giwang",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0394",
@@ -2762,7 +2762,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Kalung",
     "undercover": "Liontin",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0396",
@@ -2776,7 +2776,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Baju Renang",
     "undercover": "Bikini",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0398",
@@ -2790,7 +2790,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Kardigan",
     "undercover": "Jaket",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0400",
@@ -2804,7 +2804,7 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Celana Pendek",
     "undercover": "Kolor",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0402",
@@ -2818,363 +2818,2141 @@
     "category": "Pakaian & Aksesoris",
     "civilian": "Kacamata Hitam",
     "undercover": "Kacamata Baca",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0404",
     "category": "Olahraga & Hobi",
     "civilian": "Sepak Bola",
     "undercover": "Futsal",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0405",
     "category": "Olahraga & Hobi",
     "civilian": "Basket",
     "undercover": "Voli",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0406",
     "category": "Olahraga & Hobi",
     "civilian": "Badminton",
     "undercover": "Tenis",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0407",
     "category": "Olahraga & Hobi",
     "civilian": "Pingpong",
     "undercover": "Tenis",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0408",
     "category": "Olahraga & Hobi",
     "civilian": "Renang",
     "undercover": "Menyelam",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0409",
     "category": "Olahraga & Hobi",
     "civilian": "Lari",
     "undercover": "Jalan Santai",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0410",
     "category": "Olahraga & Hobi",
     "civilian": "Tinju",
     "undercover": "Karate",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0411",
     "category": "Olahraga & Hobi",
     "civilian": "Silat",
     "undercover": "Kungfu",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0412",
     "category": "Olahraga & Hobi",
     "civilian": "Golf",
     "undercover": "Biliar",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0413",
     "category": "Olahraga & Hobi",
     "civilian": "Bowling",
     "undercover": "Kelereng",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0414",
     "category": "Olahraga & Hobi",
     "civilian": "Catur",
     "undercover": "Dakon",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0415",
     "category": "Olahraga & Hobi",
     "civilian": "Gitar",
     "undercover": "Bass",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0416",
     "category": "Olahraga & Hobi",
     "civilian": "Piano",
     "undercover": "Keyboard",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0417",
     "category": "Olahraga & Hobi",
     "civilian": "Drum",
     "undercover": "Kendang",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0418",
     "category": "Olahraga & Hobi",
     "civilian": "Biola",
     "undercover": "Gitar",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0419",
     "category": "Olahraga & Hobi",
     "civilian": "Suling",
     "undercover": "Terompet",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0420",
     "category": "Olahraga & Hobi",
     "civilian": "Bioskop",
     "undercover": "Teater",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0421",
     "category": "Olahraga & Hobi",
     "civilian": "Konser",
     "undercover": "Pentas",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0422",
     "category": "Olahraga & Hobi",
     "civilian": "Lukisan",
     "undercover": "Patung",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0423",
     "category": "Olahraga & Hobi",
     "civilian": "Komik",
     "undercover": "Novel",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0424",
     "category": "Olahraga & Hobi",
     "civilian": "Catur",
     "undercover": "Kartu",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0425",
     "category": "Olahraga & Hobi",
     "civilian": "Uno",
     "undercover": "Remi",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0426",
     "category": "Olahraga & Hobi",
     "civilian": "Monopoli",
     "undercover": "Ular Tangga",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0427",
     "category": "Olahraga & Hobi",
     "civilian": "Layangan",
     "undercover": "Gasing",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0428",
     "category": "Olahraga & Hobi",
     "civilian": "Skateboard",
     "undercover": "Sepatu Roda",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0429",
     "category": "Olahraga & Hobi",
     "civilian": "Senam",
     "undercover": "Yoga",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0430",
     "category": "Olahraga & Hobi",
     "civilian": "Fitness",
     "undercover": "Gym",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0431",
     "category": "Sekolah & Kantor",
     "civilian": "Pulpen",
     "undercover": "Spidol",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0432",
     "category": "Sekolah & Kantor",
     "civilian": "Penghapus",
     "undercover": "Tip-Ex",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0433",
     "category": "Sekolah & Kantor",
     "civilian": "Penggaris",
     "undercover": "Jangka",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0434",
     "category": "Sekolah & Kantor",
     "civilian": "Buku Tulis",
     "undercover": "Buku Gambar",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0435",
     "category": "Sekolah & Kantor",
     "civilian": "Buku Cetak",
     "undercover": "Modul",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0436",
     "category": "Sekolah & Kantor",
     "civilian": "Map",
     "undercover": "Amplop",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0437",
     "category": "Sekolah & Kantor",
     "civilian": "Kertas",
     "undercover": "Karton",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0438",
     "category": "Sekolah & Kantor",
     "civilian": "Lem",
     "undercover": "Solasi",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0439",
     "category": "Sekolah & Kantor",
     "civilian": "Stapler",
     "undercover": "Klip",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0440",
     "category": "Sekolah & Kantor",
     "civilian": "Gunting",
     "undercover": "Cutter",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0441",
     "category": "Sekolah & Kantor",
     "civilian": "Rapor",
     "undercover": "Ijazah",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0442",
     "category": "Sekolah & Kantor",
     "civilian": "Ujian",
     "undercover": "Kuis",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0443",
     "category": "Sekolah & Kantor",
     "civilian": "Skripsi",
     "undercover": "Tugas Akhir",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0444",
     "category": "Sekolah & Kantor",
     "civilian": "Kantin",
     "undercover": "Koperasi",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0445",
     "category": "Sekolah & Kantor",
     "civilian": "Upacara",
     "undercover": "Apel",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0446",
     "category": "Sekolah & Kantor",
     "civilian": "Papan Tulis",
     "undercover": "Spidol",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0447",
     "category": "Sekolah & Kantor",
     "civilian": "Absensi",
     "undercover": "Tanda Tangan",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0448",
     "category": "Sekolah & Kantor",
     "civilian": "Seragam",
     "undercover": "Batik",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0449",
     "category": "Sekolah & Kantor",
     "civilian": "Meja Belajar",
     "undercover": "Laci",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0450",
     "category": "Sekolah & Kantor",
     "civilian": "Bel Sekolah",
     "undercover": "Alarm",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0451",
     "category": "Sekolah & Kantor",
     "civilian": "Spidol",
     "undercover": "Stabilo",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0452",
     "category": "Sekolah & Kantor",
     "civilian": "Krayon",
     "undercover": "Pensil Warna",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0453",
     "category": "Sekolah & Kantor",
     "civilian": "Cat Air",
     "undercover": "Kuas",
-    "difficulty": "easy"
+    "difficulty": "medium"
   },
   {
     "id": "wp_0454",
     "category": "Sekolah & Kantor",
     "civilian": "Kalkulator",
     "undercover": "Abakus",
-    "difficulty": "easy"
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0455",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Mimpi",
+    "undercover": "Halusinasi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0456",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Bayangan",
+    "undercover": "Pantulan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0457",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Gema",
+    "undercover": "Bisikan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0458",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Hening",
+    "undercover": "Sepi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0459",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Rindu",
+    "undercover": "Kenangan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0460",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Janji",
+    "undercover": "Sumpah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0461",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Rahasia",
+    "undercover": "Rumor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0462",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Kebohongan",
+    "undercover": "Alasan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0463",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Curiga",
+    "undercover": "Cemburu",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0464",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Takut",
+    "undercover": "Panik",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0465",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Malu",
+    "undercover": "Gugup",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0466",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Kaget",
+    "undercover": "Heran",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0467",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Bosan",
+    "undercover": "Lelah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0468",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Sabar",
+    "undercover": "Pasrah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0469",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Nekat",
+    "undercover": "Berani",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0470",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Sombong",
+    "undercover": "Percaya Diri",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0471",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Iri",
+    "undercover": "Dengki",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0472",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Nasib",
+    "undercover": "Takdir",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0473",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Kebetulan",
+    "undercover": "Keajaiban",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0474",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Ilusi",
+    "undercover": "Fatamorgana",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0475",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Insting",
+    "undercover": "Firasat",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0476",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Logika",
+    "undercover": "Intuisi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0477",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Fakta",
+    "undercover": "Opini",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0478",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Mitos",
+    "undercover": "Legenda",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0479",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Teka-Teki",
+    "undercover": "Labirin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0480",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Kode",
+    "undercover": "Sandi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0481",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Jejak",
+    "undercover": "Saksi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0482",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Alibi",
+    "undercover": "Bukti",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0483",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Jebakan",
+    "undercover": "Umpan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0484",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Rencana",
+    "undercover": "Strategi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0485",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Risiko",
+    "undercover": "Taruhan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0486",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Harapan",
+    "undercover": "Khayalan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0487",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Nostalgia",
+    "undercover": "Deja Vu",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0488",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Bakat",
+    "undercover": "Keahlian",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0489",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Kebiasaan",
+    "undercover": "Tradisi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0490",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Aroma",
+    "undercover": "Wangi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0491",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Senyum",
+    "undercover": "Tawa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0492",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Tangis",
+    "undercover": "Gerutu",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0493",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Pujian",
+    "undercover": "Rayuan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0494",
+    "category": "Abstrak & Pikiran",
+    "civilian": "Sindiran",
+    "undercover": "Candaan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0495",
+    "category": "Misteri & Fantasi",
+    "civilian": "Sulap",
+    "undercover": "Sihir",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0496",
+    "category": "Misteri & Fantasi",
+    "civilian": "Hipnotis",
+    "undercover": "Telepati",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0497",
+    "category": "Misteri & Fantasi",
+    "civilian": "Ramalan",
+    "undercover": "Horoskop",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0498",
+    "category": "Misteri & Fantasi",
+    "civilian": "Jimat",
+    "undercover": "Pusaka",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0499",
+    "category": "Misteri & Fantasi",
+    "civilian": "Kutukan",
+    "undercover": "Karma",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0500",
+    "category": "Misteri & Fantasi",
+    "civilian": "Hantu",
+    "undercover": "Siluman",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0501",
+    "category": "Misteri & Fantasi",
+    "civilian": "Vampir",
+    "undercover": "Zombi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0502",
+    "category": "Misteri & Fantasi",
+    "civilian": "Naga",
+    "undercover": "Phoenix",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0503",
+    "category": "Misteri & Fantasi",
+    "civilian": "Putri Duyung",
+    "undercover": "Peri",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0504",
+    "category": "Misteri & Fantasi",
+    "civilian": "Raksasa",
+    "undercover": "Kurcaci",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0505",
+    "category": "Misteri & Fantasi",
+    "civilian": "Ksatria",
+    "undercover": "Samurai",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0506",
+    "category": "Misteri & Fantasi",
+    "civilian": "Ninja",
+    "undercover": "Mata-Mata",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0507",
+    "category": "Misteri & Fantasi",
+    "civilian": "Bajak Laut",
+    "undercover": "Viking",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0508",
+    "category": "Misteri & Fantasi",
+    "civilian": "Koboi",
+    "undercover": "Sheriff",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0509",
+    "category": "Misteri & Fantasi",
+    "civilian": "Detektif",
+    "undercover": "Intel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0510",
+    "category": "Misteri & Fantasi",
+    "civilian": "Fosil",
+    "undercover": "Artefak",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0511",
+    "category": "Misteri & Fantasi",
+    "civilian": "Mumi",
+    "undercover": "Kerangka",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0512",
+    "category": "Misteri & Fantasi",
+    "civilian": "Piramida",
+    "undercover": "Candi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0513",
+    "category": "Misteri & Fantasi",
+    "civilian": "Kastil",
+    "undercover": "Benteng",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0514",
+    "category": "Misteri & Fantasi",
+    "civilian": "Istana",
+    "undercover": "Keraton",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0515",
+    "category": "Misteri & Fantasi",
+    "civilian": "Trailer",
+    "undercover": "Teaser",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0516",
+    "category": "Misteri & Fantasi",
+    "civilian": "Spoiler",
+    "undercover": "Bocoran",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0517",
+    "category": "Misteri & Fantasi",
+    "civilian": "Sekuel",
+    "undercover": "Remake",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0518",
+    "category": "Misteri & Fantasi",
+    "civilian": "Cameo",
+    "undercover": "Figuran",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0519",
+    "category": "Misteri & Fantasi",
+    "civilian": "Stuntman",
+    "undercover": "Aktor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0520",
+    "category": "Misteri & Fantasi",
+    "civilian": "Sutradara",
+    "undercover": "Produser",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0521",
+    "category": "Misteri & Fantasi",
+    "civilian": "Naskah",
+    "undercover": "Sinopsis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0522",
+    "category": "Misteri & Fantasi",
+    "civilian": "Sirkus",
+    "undercover": "Karnaval",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0523",
+    "category": "Misteri & Fantasi",
+    "civilian": "Novel",
+    "undercover": "Biografi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0524",
+    "category": "Misteri & Fantasi",
+    "civilian": "Puisi",
+    "undercover": "Lirik",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0525",
+    "category": "Sains & Semesta",
+    "civilian": "Kabut",
+    "undercover": "Asap",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0526",
+    "category": "Sains & Semesta",
+    "civilian": "Embun",
+    "undercover": "Keringat",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0527",
+    "category": "Sains & Semesta",
+    "civilian": "Bara",
+    "undercover": "Abu",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0528",
+    "category": "Sains & Semesta",
+    "civilian": "Asteroid",
+    "undercover": "Satelit",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0529",
+    "category": "Sains & Semesta",
+    "civilian": "Orbit",
+    "undercover": "Gravitasi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0530",
+    "category": "Sains & Semesta",
+    "civilian": "Lubang Hitam",
+    "undercover": "Nebula",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0531",
+    "category": "Sains & Semesta",
+    "civilian": "Gerhana",
+    "undercover": "Purnama",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0532",
+    "category": "Sains & Semesta",
+    "civilian": "Fajar",
+    "undercover": "Senja",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0533",
+    "category": "Sains & Semesta",
+    "civilian": "Musim",
+    "undercover": "Iklim",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0534",
+    "category": "Sains & Semesta",
+    "civilian": "Tsunami",
+    "undercover": "Ombak",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0535",
+    "category": "Sains & Semesta",
+    "civilian": "Longsor",
+    "undercover": "Erosi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0536",
+    "category": "Sains & Semesta",
+    "civilian": "Kawah",
+    "undercover": "Kaldera",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0537",
+    "category": "Sains & Semesta",
+    "civilian": "Gletser",
+    "undercover": "Gunung Es",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0538",
+    "category": "Sains & Semesta",
+    "civilian": "Oasis",
+    "undercover": "Mata Air",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0539",
+    "category": "Sains & Semesta",
+    "civilian": "Ngarai",
+    "undercover": "Jurang",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0540",
+    "category": "Sains & Semesta",
+    "civilian": "Tebing",
+    "undercover": "Karang",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0541",
+    "category": "Sains & Semesta",
+    "civilian": "Delta",
+    "undercover": "Muara",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0542",
+    "category": "Sains & Semesta",
+    "civilian": "Rawa",
+    "undercover": "Gambut",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0543",
+    "category": "Sains & Semesta",
+    "civilian": "Sabana",
+    "undercover": "Stepa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0544",
+    "category": "Sains & Semesta",
+    "civilian": "Radar",
+    "undercover": "Sonar",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0545",
+    "category": "Sains & Semesta",
+    "civilian": "Laser",
+    "undercover": "Sinar X",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0546",
+    "category": "Sains & Semesta",
+    "civilian": "Prisma",
+    "undercover": "Lensa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0547",
+    "category": "Sains & Semesta",
+    "civilian": "Kristal",
+    "undercover": "Berlian",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0548",
+    "category": "Sains & Semesta",
+    "civilian": "Emas",
+    "undercover": "Kuningan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0549",
+    "category": "Sains & Semesta",
+    "civilian": "Perak",
+    "undercover": "Platinum",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0550",
+    "category": "Sains & Semesta",
+    "civilian": "Besi",
+    "undercover": "Baja",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0551",
+    "category": "Sains & Semesta",
+    "civilian": "Tembaga",
+    "undercover": "Perunggu",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0552",
+    "category": "Sains & Semesta",
+    "civilian": "Marmer",
+    "undercover": "Granit",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0553",
+    "category": "Sains & Semesta",
+    "civilian": "Keramik",
+    "undercover": "Porselen",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0554",
+    "category": "Sains & Semesta",
+    "civilian": "Karet",
+    "undercover": "Silikon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0555",
+    "category": "Dunia Modern",
+    "civilian": "Hacker",
+    "undercover": "Programmer",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0556",
+    "category": "Dunia Modern",
+    "civilian": "Virus",
+    "undercover": "Malware",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0557",
+    "category": "Dunia Modern",
+    "civilian": "Spam",
+    "undercover": "Phishing",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0558",
+    "category": "Dunia Modern",
+    "civilian": "Algoritma",
+    "undercover": "Enkripsi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0559",
+    "category": "Dunia Modern",
+    "civilian": "Server",
+    "undercover": "Cloud",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0560",
+    "category": "Dunia Modern",
+    "civilian": "Cache",
+    "undercover": "Cookie",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0561",
+    "category": "Dunia Modern",
+    "civilian": "Pixel",
+    "undercover": "Vektor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0562",
+    "category": "Dunia Modern",
+    "civilian": "Drone",
+    "undercover": "Satelit",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0563",
+    "category": "Dunia Modern",
+    "civilian": "Roket",
+    "undercover": "Rudal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0564",
+    "category": "Dunia Modern",
+    "civilian": "Utang",
+    "undercover": "Cicilan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0565",
+    "category": "Dunia Modern",
+    "civilian": "Bunga",
+    "undercover": "Pajak",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0566",
+    "category": "Dunia Modern",
+    "civilian": "Diskon",
+    "undercover": "Cashback",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0567",
+    "category": "Dunia Modern",
+    "civilian": "Bonus",
+    "undercover": "Tip",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0568",
+    "category": "Dunia Modern",
+    "civilian": "Gaji",
+    "undercover": "Upah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0569",
+    "category": "Dunia Modern",
+    "civilian": "Warisan",
+    "undercover": "Hibah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0570",
+    "category": "Dunia Modern",
+    "civilian": "Pensiun",
+    "undercover": "Resign",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0571",
+    "category": "Dunia Modern",
+    "civilian": "Cuti",
+    "undercover": "Libur",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0572",
+    "category": "Dunia Modern",
+    "civilian": "Lembur",
+    "undercover": "Piket",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0573",
+    "category": "Dunia Modern",
+    "civilian": "Wawancara",
+    "undercover": "Audisi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0574",
+    "category": "Dunia Modern",
+    "civilian": "Sidang",
+    "undercover": "Rapat",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0575",
+    "category": "Dunia Modern",
+    "civilian": "Debat",
+    "undercover": "Diskusi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0576",
+    "category": "Dunia Modern",
+    "civilian": "Pidato",
+    "undercover": "Ceramah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0577",
+    "category": "Dunia Modern",
+    "civilian": "Saham",
+    "undercover": "Obligasi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0578",
+    "category": "Dunia Modern",
+    "civilian": "Kripto",
+    "undercover": "Valas",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0579",
+    "category": "Dunia Modern",
+    "civilian": "Asuransi",
+    "undercover": "Investasi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0580",
+    "category": "Dunia Modern",
+    "civilian": "Kredit",
+    "undercover": "Debit",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0581",
+    "category": "Dunia Modern",
+    "civilian": "Paspor",
+    "undercover": "Visa",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0582",
+    "category": "Dunia Modern",
+    "civilian": "Faktur",
+    "undercover": "Kuitansi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0583",
+    "category": "Dunia Modern",
+    "civilian": "Materai",
+    "undercover": "Perangko",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0584",
+    "category": "Dunia Modern",
+    "civilian": "Kupon",
+    "undercover": "Voucher",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0585",
+    "category": "Dunia Modern",
+    "civilian": "Medali",
+    "undercover": "Trofi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0586",
+    "category": "Dunia Modern",
+    "civilian": "Plakat",
+    "undercover": "Sertifikat",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0587",
+    "category": "Dunia Modern",
+    "civilian": "Skripsi",
+    "undercover": "Tesis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0588",
+    "category": "Dunia Modern",
+    "civilian": "Wisuda",
+    "undercover": "Yudisium",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0589",
+    "category": "Dunia Modern",
+    "civilian": "Beasiswa",
+    "undercover": "Subsidi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0590",
+    "category": "Kuliner Menjebak",
+    "civilian": "Kunyit",
+    "undercover": "Temulawak",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0591",
+    "category": "Kuliner Menjebak",
+    "civilian": "Jahe",
+    "undercover": "Lengkuas",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0592",
+    "category": "Kuliner Menjebak",
+    "civilian": "Kencur",
+    "undercover": "Serai",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0593",
+    "category": "Kuliner Menjebak",
+    "civilian": "Ketumbar",
+    "undercover": "Jintan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0594",
+    "category": "Kuliner Menjebak",
+    "civilian": "Kayu Manis",
+    "undercover": "Kapulaga",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0595",
+    "category": "Kuliner Menjebak",
+    "civilian": "Seledri",
+    "undercover": "Parsley",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0596",
+    "category": "Kuliner Menjebak",
+    "civilian": "Kemangi",
+    "undercover": "Mint",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0597",
+    "category": "Kuliner Menjebak",
+    "civilian": "Sagu",
+    "undercover": "Tapioka",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0598",
+    "category": "Kuliner Menjebak",
+    "civilian": "Terigu",
+    "undercover": "Maizena",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0599",
+    "category": "Kuliner Menjebak",
+    "civilian": "Mentega",
+    "undercover": "Margarin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0600",
+    "category": "Kuliner Menjebak",
+    "civilian": "Susu",
+    "undercover": "Santan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0601",
+    "category": "Kuliner Menjebak",
+    "civilian": "Cuka",
+    "undercover": "Mirin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0602",
+    "category": "Kuliner Menjebak",
+    "civilian": "Kecap",
+    "undercover": "Saus Tiram",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0603",
+    "category": "Kuliner Menjebak",
+    "civilian": "Terasi",
+    "undercover": "Petis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0604",
+    "category": "Kuliner Menjebak",
+    "civilian": "Kerupuk",
+    "undercover": "Emping",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0605",
+    "category": "Kuliner Menjebak",
+    "civilian": "Cireng",
+    "undercover": "Cilung",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0606",
+    "category": "Kuliner Menjebak",
+    "civilian": "Seblak",
+    "undercover": "Baso Aci",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0607",
+    "category": "Kuliner Menjebak",
+    "civilian": "Soto",
+    "undercover": "Coto",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0608",
+    "category": "Kuliner Menjebak",
+    "civilian": "Rawon",
+    "undercover": "Semur",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0609",
+    "category": "Kuliner Menjebak",
+    "civilian": "Rendang",
+    "undercover": "Kalio",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0610",
+    "category": "Kuliner Menjebak",
+    "civilian": "Gulai",
+    "undercover": "Opor",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0611",
+    "category": "Kuliner Menjebak",
+    "civilian": "Pecel",
+    "undercover": "Gado-Gado",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0612",
+    "category": "Kuliner Menjebak",
+    "civilian": "Ketoprak",
+    "undercover": "Lotek",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0613",
+    "category": "Kuliner Menjebak",
+    "civilian": "Pempek",
+    "undercover": "Tekwan",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0614",
+    "category": "Kuliner Menjebak",
+    "civilian": "Lumpia",
+    "undercover": "Risol",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0615",
+    "category": "Kuliner Menjebak",
+    "civilian": "Pastel",
+    "undercover": "Panada",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0616",
+    "category": "Kuliner Menjebak",
+    "civilian": "Kroket",
+    "undercover": "Perkedel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0617",
+    "category": "Kuliner Menjebak",
+    "civilian": "Serabi",
+    "undercover": "Pukis",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0618",
+    "category": "Kuliner Menjebak",
+    "civilian": "Lemper",
+    "undercover": "Lontong",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0619",
+    "category": "Kuliner Menjebak",
+    "civilian": "Ketupat",
+    "undercover": "Buras",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0620",
+    "category": "Kuliner Menjebak",
+    "civilian": "Es Campur",
+    "undercover": "Es Teler",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0621",
+    "category": "Kuliner Menjebak",
+    "civilian": "Bajigur",
+    "undercover": "Bandrek",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0622",
+    "category": "Kuliner Menjebak",
+    "civilian": "Espresso",
+    "undercover": "Americano",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0623",
+    "category": "Kuliner Menjebak",
+    "civilian": "Latte",
+    "undercover": "Cappuccino",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0624",
+    "category": "Kuliner Menjebak",
+    "civilian": "Matcha",
+    "undercover": "Teh Hijau",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0625",
+    "category": "Kuliner Menjebak",
+    "civilian": "Boba",
+    "undercover": "Cincau",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0626",
+    "category": "Kuliner Menjebak",
+    "civilian": "Soda",
+    "undercover": "Tonik",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0627",
+    "category": "Kuliner Menjebak",
+    "civilian": "Yoghurt",
+    "undercover": "Kefir",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0628",
+    "category": "Kuliner Menjebak",
+    "civilian": "Donat",
+    "undercover": "Bagel",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0629",
+    "category": "Kuliner Menjebak",
+    "civilian": "Wafel",
+    "undercover": "Panekuk",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0630",
+    "category": "Kuliner Menjebak",
+    "civilian": "Brownies",
+    "undercover": "Fudge",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0631",
+    "category": "Fauna Menjebak",
+    "civilian": "Bunglon",
+    "undercover": "Iguana",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0632",
+    "category": "Fauna Menjebak",
+    "civilian": "Komodo",
+    "undercover": "Biawak",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0633",
+    "category": "Fauna Menjebak",
+    "civilian": "Lumba-Lumba",
+    "undercover": "Pesut",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0634",
+    "category": "Fauna Menjebak",
+    "civilian": "Paus",
+    "undercover": "Orca",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0635",
+    "category": "Fauna Menjebak",
+    "civilian": "Hiu",
+    "undercover": "Pari",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0636",
+    "category": "Fauna Menjebak",
+    "civilian": "Tiram",
+    "undercover": "Kerang",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0637",
+    "category": "Fauna Menjebak",
+    "civilian": "Ubur-Ubur",
+    "undercover": "Anemon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0638",
+    "category": "Fauna Menjebak",
+    "civilian": "Jangkrik",
+    "undercover": "Tonggeret",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0639",
+    "category": "Fauna Menjebak",
+    "civilian": "Kutu",
+    "undercover": "Tungau",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0640",
+    "category": "Fauna Menjebak",
+    "civilian": "Cacing",
+    "undercover": "Lintah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0641",
+    "category": "Fauna Menjebak",
+    "civilian": "Siput",
+    "undercover": "Bekicot",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0642",
+    "category": "Fauna Menjebak",
+    "civilian": "Kalajengking",
+    "undercover": "Tarantula",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0643",
+    "category": "Fauna Menjebak",
+    "civilian": "Kelabang",
+    "undercover": "Kaki Seribu",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0644",
+    "category": "Fauna Menjebak",
+    "civilian": "Gagak",
+    "undercover": "Elang",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0645",
+    "category": "Fauna Menjebak",
+    "civilian": "Merpati",
+    "undercover": "Tekukur",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0646",
+    "category": "Fauna Menjebak",
+    "civilian": "Penguin",
+    "undercover": "Puffin",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0647",
+    "category": "Fauna Menjebak",
+    "civilian": "Unta",
+    "undercover": "Llama",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0648",
+    "category": "Fauna Menjebak",
+    "civilian": "Kuda",
+    "undercover": "Keledai",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0649",
+    "category": "Fauna Menjebak",
+    "civilian": "Zebra",
+    "undercover": "Okapi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0650",
+    "category": "Fauna Menjebak",
+    "civilian": "Macan Tutul",
+    "undercover": "Cheetah",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0651",
+    "category": "Fauna Menjebak",
+    "civilian": "Gorila",
+    "undercover": "Simpanse",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0652",
+    "category": "Fauna Menjebak",
+    "civilian": "Kangguru",
+    "undercover": "Koala",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0653",
+    "category": "Fauna Menjebak",
+    "civilian": "Tupai",
+    "undercover": "Musang",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0654",
+    "category": "Fauna Menjebak",
+    "civilian": "Berang-Berang",
+    "undercover": "Landak",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0655",
+    "category": "Fauna Menjebak",
+    "civilian": "Kelelawar",
+    "undercover": "Burung Hantu",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0656",
+    "category": "Benda & Gaya",
+    "civilian": "Sutra",
+    "undercover": "Satin",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0657",
+    "category": "Benda & Gaya",
+    "civilian": "Katun",
+    "undercover": "Linen",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0658",
+    "category": "Benda & Gaya",
+    "civilian": "Wol",
+    "undercover": "Flanel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0659",
+    "category": "Benda & Gaya",
+    "civilian": "Denim",
+    "undercover": "Kanvas",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0660",
+    "category": "Benda & Gaya",
+    "civilian": "Dasi",
+    "undercover": "Syal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0661",
+    "category": "Benda & Gaya",
+    "civilian": "Ikat Pinggang",
+    "undercover": "Suspender",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0662",
+    "category": "Benda & Gaya",
+    "civilian": "Kemeja",
+    "undercover": "Blazer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0663",
+    "category": "Benda & Gaya",
+    "civilian": "Mahkota",
+    "undercover": "Tiara",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0664",
+    "category": "Benda & Gaya",
+    "civilian": "Topeng",
+    "undercover": "Riasan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0665",
+    "category": "Benda & Gaya",
+    "civilian": "Tato",
+    "undercover": "Henna",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0666",
+    "category": "Benda & Gaya",
+    "civilian": "Parfum",
+    "undercover": "Deodoran",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0667",
+    "category": "Benda & Gaya",
+    "civilian": "Sunscreen",
+    "undercover": "Pelembap",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0668",
+    "category": "Benda & Gaya",
+    "civilian": "Brankas",
+    "undercover": "Loker",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0669",
+    "category": "Benda & Gaya",
+    "civilian": "Gembok",
+    "undercover": "Borgol",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0670",
+    "category": "Benda & Gaya",
+    "civilian": "Peluit",
+    "undercover": "Sirine",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0671",
+    "category": "Benda & Gaya",
+    "civilian": "Kompas",
+    "undercover": "GPS",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0672",
+    "category": "Benda & Gaya",
+    "civilian": "Menara",
+    "undercover": "Mercusuar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0673",
+    "category": "Benda & Gaya",
+    "civilian": "Jangkar",
+    "undercover": "Pelampung",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0674",
+    "category": "Benda & Gaya",
+    "civilian": "Eskalator",
+    "undercover": "Lift",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0675",
+    "category": "Benda & Gaya",
+    "civilian": "Terowongan",
+    "undercover": "Bunker",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0676",
+    "category": "Benda & Gaya",
+    "civilian": "Dermaga",
+    "undercover": "Pelabuhan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0677",
+    "category": "Benda & Gaya",
+    "civilian": "Bandara",
+    "undercover": "Hanggar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0678",
+    "category": "Benda & Gaya",
+    "civilian": "Stasiun",
+    "undercover": "Terminal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0679",
+    "category": "Benda & Gaya",
+    "civilian": "Museum",
+    "undercover": "Galeri",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0680",
+    "category": "Benda & Gaya",
+    "civilian": "Perpustakaan",
+    "undercover": "Arsip",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0681",
+    "category": "Benda & Gaya",
+    "civilian": "Apotek",
+    "undercover": "Klinik",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0682",
+    "category": "Benda & Gaya",
+    "civilian": "Termometer",
+    "undercover": "Barometer",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0683",
+    "category": "Benda & Gaya",
+    "civilian": "Mikroskop",
+    "undercover": "Teleskop",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0684",
+    "category": "Benda & Gaya",
+    "civilian": "Perban",
+    "undercover": "Plester",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0685",
+    "category": "Benda & Gaya",
+    "civilian": "Kruk",
+    "undercover": "Kursi Roda",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0686",
+    "category": "Olahraga & Hobi",
+    "civilian": "Biliar",
+    "undercover": "Snooker",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0687",
+    "category": "Olahraga & Hobi",
+    "civilian": "Bowling",
+    "undercover": "Curling",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0688",
+    "category": "Olahraga & Hobi",
+    "civilian": "Catur",
+    "undercover": "Shogi",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0689",
+    "category": "Olahraga & Hobi",
+    "civilian": "Domino",
+    "undercover": "Mahjong",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0690",
+    "category": "Olahraga & Hobi",
+    "civilian": "Karambol",
+    "undercover": "Congklak",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0691",
+    "category": "Olahraga & Hobi",
+    "civilian": "Bumerang",
+    "undercover": "Frisbee",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0692",
+    "category": "Olahraga & Hobi",
+    "civilian": "Ketapel",
+    "undercover": "Panahan",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0693",
+    "category": "Olahraga & Hobi",
+    "civilian": "Anggar",
+    "undercover": "Kendo",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0694",
+    "category": "Olahraga & Hobi",
+    "civilian": "Judo",
+    "undercover": "Karate",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0695",
+    "category": "Olahraga & Hobi",
+    "civilian": "Silat",
+    "undercover": "Muay Thai",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0696",
+    "category": "Olahraga & Hobi",
+    "civilian": "Yoga",
+    "undercover": "Pilates",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0697",
+    "category": "Olahraga & Hobi",
+    "civilian": "Snorkeling",
+    "undercover": "Diving",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0698",
+    "category": "Olahraga & Hobi",
+    "civilian": "Surfing",
+    "undercover": "Wakeboarding",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0699",
+    "category": "Olahraga & Hobi",
+    "civilian": "Ski",
+    "undercover": "Snowboard",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0700",
+    "category": "Olahraga & Hobi",
+    "civilian": "Maraton",
+    "undercover": "Sprint",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0701",
+    "category": "Olahraga & Hobi",
+    "civilian": "Biola",
+    "undercover": "Cello",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0702",
+    "category": "Olahraga & Hobi",
+    "civilian": "Gitar",
+    "undercover": "Ukulele",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0703",
+    "category": "Olahraga & Hobi",
+    "civilian": "Piano",
+    "undercover": "Akordeon",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0704",
+    "category": "Olahraga & Hobi",
+    "civilian": "Trompet",
+    "undercover": "Saksofon",
+    "difficulty": "hard"
+  },
+  {
+    "id": "wp_0705",
+    "category": "Olahraga & Hobi",
+    "civilian": "Seruling",
+    "undercover": "Harmonika",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0706",
+    "category": "Olahraga & Hobi",
+    "civilian": "Gamelan",
+    "undercover": "Angklung",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0707",
+    "category": "Olahraga & Hobi",
+    "civilian": "Kendang",
+    "undercover": "Rebana",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wp_0708",
+    "category": "Olahraga & Hobi",
+    "civilian": "Mikrofon",
+    "undercover": "Megafon",
+    "difficulty": "medium"
   }
 ]
